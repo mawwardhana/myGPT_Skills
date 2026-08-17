@@ -48,6 +48,44 @@ composite, or other formulation:
 - if additional active antimicrobial substances are present, do not
   attribute the total antibacterial effect solely to chitosan.
 
+### Formulation inclusion rule
+
+A study must not be EXCLUDED solely because chitosan is presented as a
+film, gel, membrane, nanoparticle, coating, composite, or other
+formulation.
+
+For a chitosan formulation/composite study:
+
+1. classify the intervention as "Chitosan formulation/composite";
+2. verify whether the study contains original empirical antibacterial
+   data relevant to the user's question;
+3. identify any additional antimicrobial active agents;
+4. assess whether the antibacterial effect can reasonably be evaluated
+   as an effect of chitosan within the formulation.
+
+If no additional antimicrobial active agent creates a major attribution
+problem, the study may remain eligible as CONFIRMED evidence.
+
+Such a study should be distinguished from native-chitosan evidence, but
+it should not be automatically moved to EXCLUDED.
+
+When the study includes chitosan-only controls, chitosan solution,
+chitosan-only film, or appropriate carrier controls, use those
+comparisons to assess attribution.
+
+Use EXCLUDED only when:
+
+- the formulation does not provide empirical data relevant to the
+  research question;
+- another antimicrobial active agent prevents meaningful attribution
+  to chitosan;
+- chitosan is only an inactive carrier or incidental component; or
+- another explicit exclusion criterion is met.
+
+"Outside the core native-chitosan evidence set" does not automatically
+mean "EXCLUDED from the literature search."
+
+
 ## Output integration
 
 When this reference file is active, add the following column to the
