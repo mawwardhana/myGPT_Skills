@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.3.2
+Version: 0.4
 
 ## Purpose
 
@@ -60,6 +60,50 @@ Identify:
 - context;
 - key concepts;
 - synonyms.
+
+## Question-framework selection
+
+After understanding the research question, consult:
+
+references/question-frameworks.md
+
+Select a structured question framework when it materially improves
+question decomposition or search-strategy development.
+
+Allowed framework labels:
+
+- PICO
+- PECO
+- PCC
+- PICo
+- SPIDER
+- NONE
+
+Do not force PICO or another framework onto a question that does not
+fit it.
+
+Select one primary framework unless there is a clear methodological
+reason to use another approach.
+
+Report:
+
+- selected framework;
+- reason for selection;
+- framework elements;
+- which elements will be translated into searchable concepts.
+
+If no formal framework is needed, use:
+
+"Framework: NONE"
+
+and continue with the standard core-concept workflow.
+
+Do not invent missing framework elements.
+
+Framework selection structures the search question only. It must not
+override evidence-status, screening, verification, ranking, or
+domain-specific rules.
+
 
 ### Step 2 — Generate search terms
 

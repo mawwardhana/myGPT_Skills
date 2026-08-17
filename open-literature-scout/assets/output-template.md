@@ -6,11 +6,31 @@
 
 ## 2. Search strategy
 
+### Question framework
+
+**Selected framework:**  
+**Reason for selection:**  
+
+| Framework element | Value | Used as searchable concept? |
+|---|---|---|
+| | | |
+
+If no formal framework is required, report:
+
+**Selected framework:** NONE
+
+and briefly explain why a formal framework would not improve the
+search.
+
+
 ### Core concepts
 
 - Concept 1:
 - Concept 2:
 - Concept 3:
+
+
+
 
 ### Keywords and synonyms
 
