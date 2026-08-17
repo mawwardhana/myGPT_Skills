@@ -47,22 +47,62 @@
 
 ## 4. Selected literature
 
-| Rank | Article | Year | Journal | Study type | Population/Object | Main relevance | DOI | Verification | Open access | Reason selected |
-|---|---|---|---|---|---|---|---|---|---|---|
+| Rank | Article | Year | Journal | Study type | Evidence status | Population/Object | Main relevance | DOI | DOI verification | Full-text access | Reason selected |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+
+Use only these Evidence status labels:
+
+- CONFIRMED
+- PROBABLE
+- UNVERIFIED
+- EXCLUDED
+
+Use only the DOI verification labels defined in `SKILL.md`.
+
+Use only the Full-text access labels defined in `SKILL.md`.
+
+When a relevant domain-specific reference file requires an additional
+classification field, add that field to this table without removing
+the mandatory columns above.
 
 ## 5. Screening notes
 
 ### Excluded candidates
 
-[Brief explanation]
+| Article | Evidence status | Reason for exclusion |
+|---|---|---|
+| | EXCLUDED | |
 
-### Uncertain records
+### Probable candidates
 
-[Brief explanation]
+| Article | Evidence status | Unresolved issue |
+|---|---|---|
+| | PROBABLE | |
+
+### Unverified records
+
+| Article | Evidence status | Verification needed |
+|---|---|---|
+| | UNVERIFIED | |
+
+If no records exist in a category, state:
+
+"None identified."
+
 
 ## 6. Search quality
 
-Confirmed primary studies:  
+Confirmed studies:  
+Probable studies:  
+Unverified records:  
+Excluded records:  
 Verified DOI:  
 Confirmed open/full-text articles:  
-Unresolved records:
+Unresolved verification issues:
+
+### Domain-specific summary
+
+If a domain-specific reference file was used, report any additional
+classification counts or quality indicators required by that reference.
+
+If no domain-specific reference was used, omit this subsection.

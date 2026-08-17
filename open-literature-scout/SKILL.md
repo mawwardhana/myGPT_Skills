@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.2
+Version: 0.3
 
 ## Purpose
 
@@ -155,11 +155,109 @@ Do not include as confirmed primary research:
 - commentaries;
 - protocols without results.
 
-If article type cannot be verified, label it:
+If primary-study status cannot be fully verified, do not classify the
+article as CONFIRMED.
 
-"Primary status not verified"
+Assign the appropriate evidence decision state:
 
-and do not mix it with confirmed primary studies.
+- PROBABLE when primary status is likely but one important element
+  remains unresolved;
+- UNVERIFIED when available information is insufficient to establish
+  primary-study status.
+
+Do not mix PROBABLE or UNVERIFIED records with CONFIRMED evidence
+without clearly labeling their status.
+
+
+## Evidence decision states
+
+Every candidate article must be assigned one evidence decision state.
+
+Use only these states:
+
+### CONFIRMED
+
+Use when:
+
+- the article is verified as primary research;
+- the article directly contains empirical data relevant to the user's question;
+- bibliographic identity is verified;
+- the article's relevance can be confirmed from a reliable scholarly source.
+
+### PROBABLE
+
+Use when:
+
+- the article appears to be primary research and directly relevant;
+- but one important element required to establish its evidence status
+  cannot yet be fully verified.
+
+Examples:
+
+- article type cannot yet be conclusively verified;
+- relevance to the research question is likely but available
+  bibliographic information is incomplete;
+- bibliographic identity cannot yet be fully established.
+
+DOI verification alone does not determine evidence status.
+
+A CONFIRMED study may have a DOI verification status of:
+
+"Not verified"
+
+Do not mix PROBABLE records with CONFIRMED records without clearly
+labeling their evidence status.
+
+
+### UNVERIFIED
+
+Use when:
+
+- insufficient information is available to establish article type,
+  relevance, or bibliographic identity.
+
+Do not present UNVERIFIED records as established evidence.
+
+### EXCLUDED
+
+Use when the article does not satisfy the inclusion criteria.
+
+Examples:
+
+- review article when primary research is requested;
+- editorial or commentary;
+- irrelevant organism;
+- irrelevant intervention;
+- article does not contain empirical data relevant to the research question.
+
+Always provide a short exclusion reason.
+
+
+## Mechanistic primary-study rule
+
+Do not exclude a primary study merely because its main purpose is
+mechanistic.
+
+A mechanistic study should remain eligible when it contains original
+empirical measurements directly relevant to the user's research question.
+
+For example, a study investigating antibacterial mechanisms may still
+qualify as CONFIRMED primary evidence when it experimentally measures:
+
+- MIC;
+- MBC;
+- bacterial viability;
+- growth inhibition;
+- membrane damage;
+- bacterial killing;
+- biofilm inhibition;
+- other direct antibacterial outcomes.
+
+Classify such studies as:
+
+"Primary research — mechanistic"
+
+when appropriate.
 
 
 ### Step 6 — Verify bibliographic information
@@ -189,9 +287,9 @@ Preferred verification sources:
 Do not infer a DOI from citations found on unrelated webpages.
 
 If the DOI cannot be independently matched to the article title,
-report:
+use the DOI verification status:
 
-"DOI not verified."
+"Not verified"
 
 ### Link rule
 
@@ -206,6 +304,87 @@ utm_campaign
 utm_medium
 
 when a clean canonical identifier is available.
+
+## Controlled reporting vocabulary
+
+Use standardized labels to improve reproducibility.
+
+### DOI verification
+
+Use only:
+
+- Verified — Publisher
+- Verified — Crossref
+- Verified — PubMed
+- Verified — Multiple authoritative sources
+- Not verified
+
+### Full-text access
+
+Use only:
+
+- Open access
+- Free full text
+- Subscription/paywalled
+- Status not verified
+
+Do not invent alternative labels such as:
+
+- confirmed free article;
+- probably open access;
+- full text seems available.
+
+When multiple verification sources are available, prefer:
+
+"Verified — Multiple authoritative sources"
+
+## Ranking rules
+
+Rank articles according to relevance to the user's question, not merely
+publication year.
+
+Use the following priority:
+
+1. Directness of evidence to the research question
+2. Confirmed primary-research status
+3. Match between intervention and requested intervention
+4. Match between organism/population and requested organism/population
+5. Quality of bibliographic verification
+6. Availability of directly relevant outcome data
+7. Recency, when otherwise comparable
+
+Do not automatically rank the newest article first.
+
+Landmark older studies may rank highly when they provide more direct
+evidence.
+
+
+## Source-use integrity
+
+Under "Sources searched", report only sources that were actually used
+during the current search.
+
+Do not list PubMed, Crossref, OpenAlex, DOAJ, or another database merely
+because it appears in the preferred-source policy.
+
+Distinguish between:
+
+- source searched;
+- source used for discovery;
+- source used for verification.
+
+## Domain-specific reference rules
+
+When a domain-specific reference file is available and directly relevant
+to the user's research topic, apply it in addition to the general
+screening workflow.
+
+Do not apply domain-specific rules to unrelated research topics.
+
+For chitosan-related literature searches, use:
+
+references/chitosan-screening.md
+
 
 ### Step 7 — Mandatory output contract
 
