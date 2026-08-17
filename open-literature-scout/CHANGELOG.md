@@ -1,5 +1,22 @@
 # Open Literature Scout — Changelog
 
+## v0.4.1
+
+### Fixed
+- Preserved experiential and perceptual meaning when translating PICo
+  and SPIDER questions into searchable concepts.
+- Clarified that OR-based synonym expansion generally increases search
+  sensitivity.
+- Clarified that additional AND-based concept blocks generally reduce
+  search sensitivity.
+- Added guidance for combining overlapping framework elements when
+  separate Boolean blocks would unnecessarily restrict retrieval.
+
+### Regression issues addressed
+- PCC Boolean sensitivity.
+- PICo qualitative phenomenon translation.
+
+
 ## v0.4
 
 ### Added

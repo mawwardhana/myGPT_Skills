@@ -196,6 +196,100 @@ Clearly distinguish:
 - searchable concepts;
 - terms actually used in the Boolean search.
 
+## Boolean sensitivity rule
+
+Distinguish between adding synonyms and adding independent concept
+blocks.
+
+Adding relevant synonyms or alternative terms within the same concept
+using OR generally increases search sensitivity.
+
+For example:
+
+("artificial intelligence" OR "machine learning" OR "generative AI")
+
+is broader than searching only:
+
+"artificial intelligence"
+
+Adding an additional concept block with AND generally makes a search
+more restrictive.
+
+For example:
+
+"artificial intelligence"
+AND
+"early childhood education"
+AND
+"classroom"
+
+is generally more restrictive than using two concept blocks.
+
+Do not state that adding synonyms with OR makes a search more
+restrictive.
+
+When framework elements substantially overlap, they may be combined
+into one searchable concept instead of creating redundant AND blocks.
+
+For example, Population and Context in a PCC question may sometimes be
+represented together by a concept such as:
+
+"early childhood education"
+
+when separating them would unnecessarily reduce retrieval sensitivity.
+
+## Qualitative phenomenon translation rule
+
+For PICo and SPIDER questions, preserve the meaning of the qualitative
+phenomenon when translating framework elements into searchable
+concepts.
+
+If the user's question explicitly concerns:
+
+- experiences;
+- perceptions;
+- perspectives;
+- attitudes;
+- views;
+- meanings;
+- beliefs;
+
+do not reduce the Phenomenon of Interest to only the object,
+technology, intervention, or activity being experienced.
+
+For example:
+
+"teachers' experiences of using digital technology"
+
+should not be translated only as:
+
+"digital technology"
+
+The searchable concepts should preserve both:
+
+- the object or phenomenon being experienced; and
+- the experiential, perceptual, or attitudinal dimension when it is
+  central to the research question.
+
+Relevant qualitative terms may include:
+
+- experience*
+- perception*
+- perspective*
+- attitude*
+- view*
+- belief*
+
+These terms do not all need to be used in every search.
+
+Select terms that preserve the user's intended phenomenon without
+making the search unnecessarily restrictive.
+
+If the experiential or perceptual concept is deliberately omitted from
+the Boolean search to improve sensitivity, explicitly state that
+decision and its reason.
+
+
 ## Framework integrity rule
 
 The selected framework structures the question and search strategy.
