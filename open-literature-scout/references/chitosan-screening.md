@@ -29,6 +29,32 @@ If only a derivative is tested:
 - keep it outside the core native-chitosan evidence set unless the
   user's question includes derivatives.
 
+### Derivative inclusion rule
+
+"Outside the core native-chitosan evidence set" does not automatically
+mean "EXCLUDED from the literature search."
+
+When a derivative-only study is otherwise relevant primary research:
+
+- classify it as "Chitosan derivative";
+- keep it outside the core native-chitosan evidence set when the user
+  asks generally about chitosan;
+- retain it as relevant secondary evidence when appropriate;
+- label its role clearly so it is not interpreted as direct evidence
+  for native chitosan.
+
+Use EXCLUDED only when:
+
+- the user's question explicitly restricts eligibility to native or
+  unmodified chitosan;
+- the derivative study is irrelevant to the requested organism,
+  outcome, or context;
+- the study fails another explicit inclusion criterion.
+
+Do not use EXCLUDED merely because the intervention is a chitosan
+derivative.
+
+
 ### Mixed-comparison rule
 
 If a study tests native chitosan and a derivative in separate groups:

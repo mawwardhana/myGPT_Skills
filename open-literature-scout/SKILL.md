@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.3.1
+Version: 0.3.2
 
 ## Purpose
 
@@ -412,3 +412,23 @@ If information for a required field cannot be verified, write:
 "Not verified"
 
 Do not omit the field.
+
+## Result consistency rule
+
+Every article mentioned in the final literature-search report must have
+a clear record status.
+
+An article discussed in the narrative must be one of:
+
+- included in Selected literature;
+- listed as PROBABLE;
+- listed as UNVERIFIED;
+- listed as EXCLUDED; or
+- explicitly identified as contextual/background literature.
+
+Do not introduce an article in summary, recommendation, DOI, or
+conclusion sections if it has not appeared earlier with a clear status.
+
+Before finalizing the response, cross-check article names, counts,
+evidence states, DOI counts, and domain-specific classification counts
+against the Selected literature and Screening notes.
