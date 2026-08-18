@@ -1,5 +1,24 @@
 # Open Literature Scout — Changelog
 
+## v0.6.1
+
+### Fixed
+- Preserved the six mandatory top-level output sections during DETAILED
+  evidence extraction.
+- Required detailed extraction to remain nested under Selected
+  literature.
+- Enforced controlled search-stopping reason labels in the output
+  template.
+
+### Preserved
+- Evidence extraction rules from v0.6.
+- Numerical integrity.
+- Multiple-group extraction.
+- Cross-study comparability.
+- Source fidelity.
+- Limitation integrity.
+
+
 ## v0.6
 
 ### Added

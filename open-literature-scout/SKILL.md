@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.6
+Version: 0.6.1
 
 ## Purpose
 

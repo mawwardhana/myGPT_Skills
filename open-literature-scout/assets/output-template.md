@@ -126,6 +126,20 @@ performed.
 Detailed extraction supplements the Selected literature record; it does
 not replace it.
 
+When DETAILED mode is active, place the detailed extraction immediately
+below this subsection and keep it inside:
+
+`## 4. Selected literature`
+
+Use subsection headings such as:
+
+`### Detailed Evidence Extraction`
+
+and lower-level headings beneath it.
+
+Do not introduce additional top-level `##` sections between Section 4
+and Section 5.
+
 ## 5. Screening notes
 
 ### Excluded candidates
@@ -164,6 +178,17 @@ Unresolved verification issues:
 Search iterations performed:  
 Final search diagnosis:  
 Search stopping reason:
+
+Use only the search stopping reason labels defined in
+`references/search-refinement.md`:
+
+- ADEQUATE_RETRIEVAL
+- NO_MATERIAL_IMPROVEMENT
+- SOURCE_LIMITATION_REACHED
+- USER_SCOPE_REACHED
+
+If explanation is needed, provide it separately after the controlled
+label.
 
 ### Domain-specific summary
 
