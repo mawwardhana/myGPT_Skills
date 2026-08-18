@@ -1,5 +1,18 @@
 # Open Literature Scout — Changelog
 
+## v0.6.2
+
+### Fixed
+- Enforced clean source links in the mandatory output template.
+- Prevented tracking parameters such as `utm_source`, `utm_medium`,
+  and `utm_campaign` from appearing in reported source URLs.
+
+### Preserved
+- DETAILED extraction integration from v0.6.1.
+- Controlled search-stopping labels.
+- Evidence extraction and integrity rules from v0.6.
+
+
 ## v0.6.1
 
 ### Fixed

@@ -71,6 +71,20 @@ provides it.
 - Source:
 - Source:
 
+
+Use clean source links.
+
+Remove tracking parameters from URLs before presenting them in the
+final report.
+
+Examples of tracking parameters that must not appear include:
+
+- utm_source
+- utm_medium
+- utm_campaign
+
+Prefer canonical publisher, database, or DOI URLs whenever available.
+
 ## 3. Screening criteria
 
 ### Include
