@@ -106,6 +106,26 @@ When a relevant domain-specific reference file requires an additional
 classification field, add that field to this table without removing
 the mandatory columns above.
 
+### Evidence extraction mode
+
+**Mode:** BASIC / DETAILED
+
+Use BASIC for routine literature scouting when the Selected literature
+table provides sufficient characterization.
+
+Use DETAILED when the user's request requires study-level extraction or
+comparison.
+
+When DETAILED is used, follow:
+
+`assets/evidence-extraction-template.md`
+
+Do not omit the Selected literature table when DETAILED extraction is
+performed.
+
+Detailed extraction supplements the Selected literature record; it does
+not replace it.
+
 ## 5. Screening notes
 
 ### Excluded candidates

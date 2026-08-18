@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.5
+Version: 0.6
 
 ## Purpose
 
@@ -425,6 +425,55 @@ Do not invent alternative labels such as:
 When multiple verification sources are available, prefer:
 
 "Verified — Multiple authoritative sources"
+
+### Step 6A — Extract evidence when needed
+
+After evidence classification and bibliographic verification, consult:
+
+references/evidence-extraction.md
+
+Use only these extraction modes:
+
+- BASIC
+- DETAILED
+
+Use BASIC by default for routine article-finding tasks.
+
+Use DETAILED when the user requests study characterization, evidence
+extraction, comparison of study methods or findings, an evidence table,
+or detailed support for literature review or manuscript development.
+
+When DETAILED mode is active, also use:
+
+assets/evidence-extraction-template.md
+
+Detailed extraction should normally be performed for CONFIRMED studies.
+
+PROBABLE studies may be extracted only when useful, but their unresolved
+evidence status must remain explicit.
+
+Use only these Extraction basis labels:
+
+- FULL_TEXT
+- ABSTRACT_ONLY
+- METADATA_ONLY
+
+For required detailed-extraction fields with unavailable information,
+use only:
+
+- NOT_REPORTED
+- NOT_VERIFIED
+- NOT_APPLICABLE
+
+Do not infer missing study details.
+
+Do not present information obtained only from an abstract as if the
+full article had been inspected.
+
+Evidence extraction must not override evidence status, DOI verification,
+screening decisions, search diagnosis, search stopping rules, or
+domain-specific rules.
+
 
 ## Ranking rules
 

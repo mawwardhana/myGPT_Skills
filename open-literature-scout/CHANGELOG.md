@@ -1,5 +1,29 @@
 # Open Literature Scout — Changelog
 
+## v0.6
+
+### Added
+- Conditional BASIC and DETAILED evidence-extraction modes.
+- Structured study characterization.
+- Extraction-basis labels for full-text, abstract-only, and metadata-only evidence.
+- Controlled missing-information labels.
+- Source-fidelity rules.
+- Numerical-integrity rules.
+- Multiple-group extraction rules.
+- Outcome-integrity rules.
+- Author-reported limitation handling.
+- Cross-study comparability rules.
+- Detailed evidence-extraction template.
+
+### Preserved
+- Search refinement and stopping logic from v0.5.
+- Question-framework selection.
+- Boolean sensitivity rules.
+- Evidence decision states.
+- DOI verification.
+- Domain-specific screening.
+- Result consistency checking.
+
 ## v0.5
 
 ### Added
