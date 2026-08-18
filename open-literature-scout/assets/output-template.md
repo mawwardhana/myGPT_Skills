@@ -44,6 +44,27 @@ search.
 
 [Search string]
 
+### Search iterations
+
+| Iteration | Query | Source actually searched | Diagnosis | Change from previous iteration | Reason |
+|---|---|---|---|---|---|
+| 1 | | | | Initial search | |
+
+Use only these Diagnosis labels:
+
+- ADEQUATE
+- TOO_BROAD
+- TOO_NARROW
+- TERMINOLOGY_GAP
+- SOURCE_LIMITATION
+
+If the initial query is adequate, state:
+
+"No refinement required."
+
+Do not report a database result count unless the source explicitly
+provides it.
+
 ### Sources searched
 
 - Source:
@@ -119,6 +140,10 @@ Excluded records:
 Verified DOI:  
 Confirmed open/full-text articles:  
 Unresolved verification issues:
+
+Search iterations performed:  
+Final search diagnosis:  
+Search stopping reason:
 
 ### Domain-specific summary
 

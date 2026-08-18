@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.4.1
+Version: 0.5
 
 ## Purpose
 
@@ -143,6 +143,50 @@ Prefer:
 
 Avoid relying on blogs or commercial aggregator pages when
 the original scholarly source is available.
+
+## Search refinement
+
+After the initial scholarly search, consult:
+
+references/search-refinement.md
+
+Evaluate the retrieved-result pattern before proceeding to final
+screening.
+
+Use only these primary search diagnosis labels:
+
+- ADEQUATE
+- TOO_BROAD
+- TOO_NARROW
+- TERMINOLOGY_GAP
+- SOURCE_LIMITATION
+
+Refine the query only when an observed retrieval problem justifies the
+change.
+
+Do not silently replace the initial query.
+
+For every search iteration, preserve:
+
+- iteration number;
+- query used;
+- source actually searched;
+- diagnosis;
+- change made;
+- reason for the change.
+
+When the initial query is adequate, state:
+
+"No refinement required."
+
+Do not judge search quality from result count alone.
+
+Do not invent result counts.
+
+Search refinement changes retrieval strategy only. It must not override
+evidence-status, screening, DOI-verification, ranking, framework, or
+domain-specific rules.
+
 
 ### Step 4 — Screen results
 

@@ -1,5 +1,28 @@
 # Open Literature Scout — Changelog
 
+## v0.5
+
+### Added
+- Iterative search-refinement workflow.
+- Controlled search-diagnosis labels.
+- Query broadening and narrowing rules.
+- Terminology-gap detection.
+- Source-limitation handling.
+- Search-iteration history.
+- Search stopping rules.
+- Result-count integrity rule.
+- Query-comparison rule.
+
+### Preserved
+- Question-framework selection from v0.4.1.
+- Framework-to-search translation rules.
+- Boolean sensitivity rules.
+- Evidence decision states.
+- DOI verification.
+- Domain-specific screening.
+- Result consistency checking.
+
+
 ## v0.4.1
 
 ### Fixed
