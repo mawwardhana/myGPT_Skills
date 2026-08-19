@@ -195,9 +195,24 @@ Use only:
 - FULL_TEXT
 - ABSTRACT_ONLY
 - METADATA_ONLY
+- USER_PROVIDED_INFORMATION
 
 Formal risk-of-bias appraisal should normally require sufficient study
 detail, usually from FULL_TEXT.
+
+Use `USER_PROVIDED_INFORMATION` when appraisal is based only on study
+information supplied directly by the user rather than on an inspected
+scholarly source.
+
+When `USER_PROVIDED_INFORMATION` is used:
+
+- do not imply that the full article was inspected;
+- do not convert absence from the supplied information into
+  article-level `NOT_REPORTED`;
+- use `NOT_VERIFIED` when information may exist in the original study
+  but cannot be checked from the material supplied;
+- formal appraisal should not be claimed complete unless the selected
+  formal tool and sufficient study information are actually available.
 
 Do not produce a confident formal risk-of-bias judgment from
 METADATA_ONLY.
@@ -301,6 +316,34 @@ These labels are internal structured-appraisal labels.
 
 They must not be presented as official judgments from RoB 2, ROBINS-I,
 QUADAS-3, JBI, AMSTAR 2, or another validated appraisal tool.
+
+
+## Control-adequacy versus attribution rule
+
+For laboratory studies, assess control adequacy separately from
+attribution of effect.
+
+`Comparator and control adequacy` asks whether appropriate controls
+needed to interpret the experiment are present and appropriately
+matched.
+
+The fact that a solvent or vehicle control itself produces a measurable
+effect does not automatically make the control inadequate.
+
+When an active solvent or vehicle is appropriately included as a
+control, the control structure may still be adequately addressed.
+
+Its measurable activity should instead be considered under:
+
+`Attribution of the observed effect`
+
+because the observed treatment response may reflect contributions from
+both the target intervention and the solvent, vehicle, formulation, or
+other active component.
+
+Do not downgrade control adequacy solely because the control itself has
+a measurable effect.
+
 
 ## Laboratory attribution rule
 

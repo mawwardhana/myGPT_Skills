@@ -51,6 +51,20 @@ official tool.
 
 Do not replace official tool terminology with generic scout labels.
 
+
+Allowed appraisal-basis labels:
+
+- FULL_TEXT
+- ABSTRACT_ONLY
+- METADATA_ONLY
+- USER_PROVIDED_INFORMATION
+
+Use `USER_PROVIDED_INFORMATION` when the appraisal relies only on study
+details supplied directly by the user.
+
+Do not use `NOT_VERIFIED` as an appraisal-basis label.
+
+
 ### Study-reported methodological information
 
 Summarize only information supported by the inspected study source.

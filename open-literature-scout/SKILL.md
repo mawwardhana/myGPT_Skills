@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.7
+Version: 0.7.1
 
 ## Purpose
 
@@ -514,6 +514,14 @@ tools or study designs.
 
 Appraisal judgments must remain separate from study-reported
 information.
+
+When appraisal is based only on methodological information supplied
+directly by the user rather than an inspected scholarly source, use:
+
+`USER_PROVIDED_INFORMATION`
+
+as the appraisal basis and do not imply that the original article or
+full text was inspected.
 
 Evidence appraisal must not override evidence status, DOI verification,
 screening decisions, search diagnosis, search stopping rules, or

@@ -1,5 +1,24 @@
 # Open Literature Scout — Changelog
 
+## v0.7.1
+
+### Fixed
+- Added `USER_PROVIDED_INFORMATION` as a controlled appraisal-basis
+  label for appraisal based on user-supplied study information.
+- Prevented `NOT_VERIFIED` from being used as an appraisal-basis label.
+- Separated comparator/control adequacy from attribution of observed
+  effects in laboratory studies.
+- Clarified that an active solvent control may still be an adequate
+  control while limiting attribution of the treatment effect.
+
+### Preserved
+- Evidence-status independence.
+- Formal-tool routing and version integrity.
+- Structured Scout Appraisal domains.
+- Replication-integrity safeguards.
+- No-universal-quality-score rule.
+
+
 ## v0.7
 
 ### Added
