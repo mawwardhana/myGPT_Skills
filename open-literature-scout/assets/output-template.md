@@ -154,6 +154,29 @@ and lower-level headings beneath it.
 Do not introduce additional top-level `##` sections between Section 4
 and Section 5.
 
+
+### Evidence appraisal
+
+**Appraisal mode:** NONE / FORMAL_TOOL / STRUCTURED_SCOUT_APPRAISAL
+
+Use NONE when methodological appraisal was not requested or required.
+
+When appraisal is performed, follow:
+
+`assets/evidence-appraisal-template.md`
+
+Keep all appraisal content inside:
+
+`## 4. Selected literature`
+
+Use subsection headings only.
+
+Do not create a new mandatory top-level section for appraisal.
+
+A CONFIRMED article must not be described as high quality merely because
+its evidence status is confirmed.
+
+
 ## 5. Screening notes
 
 ### Excluded candidates

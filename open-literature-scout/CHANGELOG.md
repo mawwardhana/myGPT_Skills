@@ -1,5 +1,31 @@
 # Open Literature Scout — Changelog
 
+## v0.7
+
+### Added
+- Evidence-appraisal routing by study design.
+- NONE, FORMAL_TOOL, and STRUCTURED_SCOUT_APPRAISAL modes.
+- Separation of evidence status from methodological trustworthiness.
+- Formal-tool version and status verification.
+- RCT routing to RoB 2.
+- Non-randomized intervention routing to ROBINS-I.
+- Diagnostic-accuracy routing to QUADAS-3.
+- Systematic-review routing to AMSTAR 2.
+- Design-appropriate JBI routing.
+- Structured scout appraisal for laboratory/in-vitro studies.
+- Replication-integrity and statistical-appraisal rules.
+- Separation of study-reported information from appraisal judgment.
+- Evidence-appraisal template.
+
+### Preserved
+- Evidence extraction from v0.6.2.
+- Numerical and multiple-group integrity.
+- Search refinement and stopping logic.
+- Question-framework selection.
+- DOI verification and clean-link rules.
+- Domain-specific screening.
+
+
 ## v0.6.2
 
 ### Fixed

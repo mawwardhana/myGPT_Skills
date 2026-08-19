@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.6.2
+Version: 0.7
 
 ## Purpose
 
@@ -471,6 +471,51 @@ Do not present information obtained only from an abstract as if the
 full article had been inspected.
 
 Evidence extraction must not override evidence status, DOI verification,
+screening decisions, search diagnosis, search stopping rules, or
+domain-specific rules.
+
+
+### Step 6B — Appraise evidence when needed
+
+After evidence extraction, when methodological appraisal is requested
+or materially necessary to answer the user's question, consult:
+
+references/evidence-appraisal.md
+
+Use only these appraisal modes:
+
+- NONE
+- FORMAL_TOOL
+- STRUCTURED_SCOUT_APPRAISAL
+
+Do not perform formal appraisal automatically for routine article
+finding.
+
+Select the appraisal approach according to the verified study design.
+
+Before applying a named formal appraisal tool, verify its current
+official version and status.
+
+Do not reproduce or modify a formal appraisal tool from memory.
+
+When FORMAL_TOOL is used, also use:
+
+assets/evidence-appraisal-template.md
+
+When STRUCTURED_SCOUT_APPRAISAL is used, also use:
+
+assets/evidence-appraisal-template.md
+
+A CONFIRMED evidence state must not be interpreted as a high-quality or
+low-risk-of-bias judgment.
+
+Do not create a universal numerical quality score across appraisal
+tools or study designs.
+
+Appraisal judgments must remain separate from study-reported
+information.
+
+Evidence appraisal must not override evidence status, DOI verification,
 screening decisions, search diagnosis, search stopping rules, or
 domain-specific rules.
 
