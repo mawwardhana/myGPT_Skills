@@ -4,6 +4,17 @@
 
 [Restate user's question]
 
+Do not place question-framework analysis in Section 1.
+
+Section 1 contains only the research question and any brief clarification
+strictly necessary to state that question.
+
+Question-framework selection belongs under:
+
+`## 2. Search strategy`
+
+and must not be moved to another mandatory section.
+
 ## 2. Search strategy
 
 ### Question framework
@@ -84,6 +95,27 @@ Examples of tracking parameters that must not appear include:
 - utm_campaign
 
 Prefer canonical publisher, database, or DOI URLs whenever available.
+
+When a URL obtained during browsing contains tracking or session
+parameters, do not reproduce the raw browsing URL in the report.
+
+Reconstruct a clean canonical URL from a stable scholarly identifier
+when this can be done without changing the resource identity.
+
+Preferred stable identifiers include:
+
+- DOI
+- PMID
+- PMCID
+
+If a clean canonical URL cannot be guaranteed, report the source name
+and stable identifier without printing the raw URL.
+
+For example:
+
+`PubMed — PMID 18456858`
+
+is preferable to reproducing a tracked PubMed URL.
 
 ## 3. Screening criteria
 

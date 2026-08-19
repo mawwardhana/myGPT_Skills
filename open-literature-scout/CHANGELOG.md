@@ -1,5 +1,28 @@
 # Open Literature Scout — Changelog
 
+## v0.7.2
+
+### Fixed
+- Clarified that an untreated control does not automatically establish
+  adequate control structure when a potentially active treatment vehicle
+  lacks a matched vehicle-only control.
+- Separated the consequences of a missing matched vehicle control for
+  control adequacy and attribution of effect.
+- Added a fallback that reports stable scholarly identifiers rather than
+  reproducing tracked browsing URLs.
+- Reinforced placement of question-framework selection under Search
+  strategy.
+
+### Preserved
+- Evidence-status independence.
+- DETAILED evidence extraction.
+- STRUCTURED_SCOUT_APPRAISAL.
+- User-provided appraisal basis.
+- Replication-integrity safeguards.
+- Formal-tool routing and completion safeguards.
+- No-universal-quality-score rule.
+
+
 ## v0.7.1
 
 ### Fixed

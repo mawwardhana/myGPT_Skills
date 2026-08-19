@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.7.1
+Version: 0.7.2
 
 ## Purpose
 
@@ -594,6 +594,16 @@ Do not skip, rename, merge, or reorder the following sections:
 4. Selected literature
 5. Screening notes
 6. Search quality
+
+Preserve the internal placement of mandatory template components.
+
+In particular:
+
+- question-framework selection belongs under `2. Search strategy`;
+- detailed evidence extraction belongs under `4. Selected literature`;
+- evidence appraisal belongs under `4. Selected literature`.
+
+Do not move these components into another mandatory section.
 
 All required fields in the selected-literature table must be included.
 

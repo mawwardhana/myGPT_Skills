@@ -344,6 +344,49 @@ other active component.
 Do not downgrade control adequacy solely because the control itself has
 a measurable effect.
 
+The presence of an untreated control does not automatically establish
+adequate control structure when the intervention is delivered using a
+potentially active solvent, vehicle, carrier, or formulation component.
+
+When a potentially active solvent or vehicle is part of the treatment
+preparation, assess whether an appropriately matched vehicle-only
+control is available.
+
+If a matched vehicle-only control is materially necessary to distinguish
+the target intervention from the vehicle effect but is absent or cannot
+be verified:
+
+`Comparator and control adequacy`
+
+should not be judged `ADEQUATELY_ADDRESSED` solely because an untreated
+control is present.
+
+Depending on the available information, use:
+
+- PARTIALLY_ADDRESSED
+- NOT_VERIFIED
+- NOT_ADDRESSED
+
+as appropriate.
+
+The same missing vehicle control may also create a separate concern
+under:
+
+`Attribution of the observed effect`
+
+because control adequacy and causal attribution evaluate different
+methodological questions.
+
+Therefore:
+
+presence of an active but appropriately matched vehicle control
+does not automatically reduce control adequacy;
+
+but
+
+absence of a materially necessary matched vehicle control may reduce
+control adequacy.
+
 
 ## Laboratory attribution rule
 
