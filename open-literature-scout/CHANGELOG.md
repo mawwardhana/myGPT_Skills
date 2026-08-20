@@ -1,5 +1,41 @@
 # Open Literature Scout — Changelog
 
+## v0.8
+
+### Added
+- Evidence synthesis as a distinct post-extraction and post-appraisal
+  workflow.
+- NONE, NARRATIVE_SYNTHESIS, and CLAIM_SUPPORT synthesis modes.
+- Study comparability classification using DIRECTLY_COMPARABLE,
+  PARTIALLY_COMPARABLE, and NOT_DIRECTLY_COMPARABLE.
+- Comparability-group clustering before cross-study interpretation.
+- DIRECT_SUPPORT, INDIRECT_SUPPORT, CONTRARY_EVIDENCE, and
+  NO_DIRECT_BEARING study-contribution labels.
+- SUPPORTED, QUALIFIED_SUPPORT, MIXED_EVIDENCE,
+  INSUFFICIENT_EVIDENCE, and NOT_SUPPORTED claim-assessment labels.
+- Claim decomposition for compound scientific claims.
+- No-vote-counting safeguard.
+- Study-overlap and double-counting safeguards.
+- Directness and generalizability safeguards.
+- Heterogeneity-versus-conflict distinction.
+- Negative-result integrity rules.
+- Narrative integration of methodological appraisal without numerical
+  weighting.
+- Explicit boundary between narrative synthesis and quantitative
+  meta-analysis.
+- Evidence-synthesis output template.
+
+### Preserved
+- Evidence-status independence.
+- Evidence extraction and numerical integrity.
+- Study-level evidence appraisal.
+- Replication-integrity safeguards.
+- Formal-tool version and completion safeguards.
+- No-universal-quality-score rule.
+- Clean scholarly link handling.
+- Mandatory six-section output contract.
+
+
 ## v0.7.2
 
 ### Fixed

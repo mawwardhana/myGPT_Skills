@@ -1,14 +1,14 @@
 ---
 name: open-literature-scout
 description: >
-  Search, screen, verify, and summarize scientific literature using
-  publicly accessible scholarly sources. Use this skill when the user
+  Search, screen, verify, extract, appraise, and synthesize scientific
+  literature using publicly accessible scholarly sources. Use this skill when the user
   asks to find scientific papers, primary studies, systematic reviews,
   DOI information, or evidence supporting a research question.
 ---
 
 # Open Literature Scout
-Version: 0.7.2
+Version: 0.8
 
 ## Purpose
 
@@ -528,6 +528,78 @@ screening decisions, search diagnosis, search stopping rules, or
 domain-specific rules.
 
 
+### Step 6C — Synthesize evidence when needed
+
+After relevant evidence has been extracted and, when appropriate,
+appraised, consult:
+
+references/evidence-synthesis.md
+
+Use only these synthesis modes:
+
+- NONE
+- NARRATIVE_SYNTHESIS
+- CLAIM_SUPPORT
+
+Use NONE for routine literature scouting, study characterization, or
+methodological appraisal when no cross-study conclusion is requested.
+
+Use NARRATIVE_SYNTHESIS when the user asks what multiple studies
+collectively show.
+
+Use CLAIM_SUPPORT when a specific scientific claim must be evaluated
+against the evidence set.
+
+When synthesis is active, also use:
+
+assets/evidence-synthesis-template.md
+
+Before synthesizing, define the evidence set and assess study
+comparability.
+
+Use only these comparability labels:
+
+- DIRECTLY_COMPARABLE
+- PARTIALLY_COMPARABLE
+- NOT_DIRECTLY_COMPARABLE
+
+For CLAIM_SUPPORT, use only these study-contribution labels:
+
+- DIRECT_SUPPORT
+- INDIRECT_SUPPORT
+- CONTRARY_EVIDENCE
+- NO_DIRECT_BEARING
+
+and only these claim-assessment labels:
+
+- SUPPORTED
+- QUALIFIED_SUPPORT
+- MIXED_EVIDENCE
+- INSUFFICIENT_EVIDENCE
+- NOT_SUPPORTED
+
+Do not determine evidence strength by study counts alone.
+
+Do not create numerical study weights from appraisal judgments.
+
+Check for overlapping evidence and avoid double counting.
+
+Do not interpret absence of evidence as evidence of absence.
+
+Do not generalize beyond the population, organism, material,
+intervention, outcome, or context supported by the evidence.
+
+This synthesis module is narrative.
+
+Do not calculate pooled effects, weighted averages, meta-analytic
+statistics, or formal certainty grades unless a separate appropriate
+workflow is explicitly invoked.
+
+Evidence synthesis must not override evidence status, DOI verification,
+screening decisions, extraction records, appraisal judgments, search
+diagnosis, search stopping rules, or domain-specific rules.
+
+
 ## Ranking rules
 
 Rank articles according to relevance to the user's question, not merely
@@ -601,9 +673,11 @@ In particular:
 
 - question-framework selection belongs under `2. Search strategy`;
 - detailed evidence extraction belongs under `4. Selected literature`;
-- evidence appraisal belongs under `4. Selected literature`.
+- evidence appraisal belongs under `4. Selected literature`;
+- evidence synthesis belongs under `4. Selected literature`.
 
 Do not move these components into another mandatory section.
+
 
 All required fields in the selected-literature table must be included.
 

@@ -209,6 +209,35 @@ A CONFIRMED article must not be described as high quality merely because
 its evidence status is confirmed.
 
 
+### Evidence synthesis
+
+**Synthesis mode:** NONE / NARRATIVE_SYNTHESIS / CLAIM_SUPPORT
+
+Use NONE when no cross-study conclusion or claim-level synthesis is
+required.
+
+When synthesis is active, follow:
+
+`assets/evidence-synthesis-template.md`
+
+Keep all synthesis content inside:
+
+`## 4. Selected literature`
+
+Use subsection headings only.
+
+Do not create a new mandatory top-level section for synthesis.
+
+Comparing study characteristics alone does not automatically activate
+evidence synthesis.
+
+Do not determine synthesis conclusions from study counts alone.
+
+Do not provide numerical pooling, meta-analytic estimates, or formal
+certainty grades unless a separate appropriate workflow has explicitly
+been applied.
+
+
 ## 5. Screening notes
 
 ### Excluded candidates
