@@ -221,6 +221,7 @@ Use only:
 
 - DIRECT_SUPPORT
 - INDIRECT_SUPPORT
+- DIRECT_INCONCLUSIVE_EVIDENCE
 - CONTRARY_EVIDENCE
 - NO_DIRECT_BEARING
 
@@ -234,6 +235,37 @@ sufficiently aligned population, intervention, and outcome.
 Use when the study contributes mechanistic, contextual, adjacent, or
 otherwise relevant information but does not directly test the exact
 claim.
+
+### DIRECT_INCONCLUSIVE_EVIDENCE
+
+Use when the study directly investigates a claim-relevant population,
+intervention/material, and outcome, but the observed evidence does not
+materially support or oppose the claim because interpretation remains
+inconclusive or too narrowly bounded.
+
+Examples include:
+
+- a directly relevant outcome tested only under a limited condition
+  that does not cover the broader claim;
+- an estimated effect that is too imprecise to distinguish meaningful
+  effect from no effect;
+- a directly relevant experiment whose result cannot responsibly be
+  classified as either support or contrary evidence.
+
+DIRECT_INCONCLUSIVE_EVIDENCE is not:
+
+- DIRECT_SUPPORT;
+- CONTRARY_EVIDENCE;
+- evidence of no effect;
+- NO_DIRECT_BEARING.
+
+The study must directly measure evidence relevant to the claim.
+
+If the relevant outcome was not measured, use NO_DIRECT_BEARING rather
+than DIRECT_INCONCLUSIVE_EVIDENCE.
+
+If the study directly tests conditions aligned with the claim and the
+finding materially opposes the claim, use CONTRARY_EVIDENCE instead.
 
 ### CONTRARY_EVIDENCE
 
@@ -483,6 +515,23 @@ Do not collapse all of these into:
 A non-significant result does not automatically prove no effect.
 
 Failure to measure an outcome is not evidence that the outcome is absent.
+
+When a study directly measures a claim-relevant outcome but its result
+is too imprecise, inconclusive, or limited in scope to materially
+support or oppose the claim, use:
+
+`DIRECT_INCONCLUSIVE_EVIDENCE`
+
+when applicable.
+
+Do not use NO_DIRECT_BEARING merely because a directly relevant study
+fails to support the broader claim.
+
+Preserve the tested condition explicitly.
+
+For example, absence of inhibition at one low concentration may define a
+condition-specific boundary without establishing absence of activity at
+higher concentrations.
 
 ## Finding-versus-synthesis rule
 

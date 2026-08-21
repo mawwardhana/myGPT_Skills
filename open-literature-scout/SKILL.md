@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8.1
+Version: 0.8.2
 
 ## Purpose
 
@@ -576,8 +576,17 @@ For CLAIM_SUPPORT, use only these study-contribution labels:
 
 - DIRECT_SUPPORT
 - INDIRECT_SUPPORT
+- DIRECT_INCONCLUSIVE_EVIDENCE
 - CONTRARY_EVIDENCE
 - NO_DIRECT_BEARING
+
+Use DIRECT_INCONCLUSIVE_EVIDENCE when a study directly measures
+claim-relevant evidence but its result is too limited, imprecise, or
+inconclusive to materially support or oppose the claim.
+
+Do not convert non-significance, limited-condition testing, or
+incomplete direct evidence into CONTRARY_EVIDENCE without sufficient
+claim alignment.
 
 and only these claim-assessment labels:
 

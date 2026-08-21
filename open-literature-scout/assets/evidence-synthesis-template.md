@@ -138,8 +138,15 @@ Use only these study-contribution labels:
 
 - DIRECT_SUPPORT
 - INDIRECT_SUPPORT
+- DIRECT_INCONCLUSIVE_EVIDENCE
 - CONTRARY_EVIDENCE
 - NO_DIRECT_BEARING
+
+Use `DIRECT_INCONCLUSIVE_EVIDENCE` when a study directly investigates
+the claim-relevant outcome but the result is too limited, imprecise, or
+inconclusive to materially support or oppose the claim.
+
+Do not use it when the relevant outcome was not measured.
 
 | Evidence unit | Evidence status | Comparability | Study contribution | Key finding | Appraisal consideration | Relevance to claim |
 |---|---|---|---|---|---|---|

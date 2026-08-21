@@ -1,5 +1,28 @@
 # Open Literature Scout — Changelog
 
+## v0.8.2
+
+### Fixed
+- Added `DIRECT_INCONCLUSIVE_EVIDENCE` for studies that directly
+  investigate a claim-relevant outcome but cannot responsibly be
+  classified as supporting or contrary evidence.
+- Distinguished direct inconclusive evidence from
+  `NO_DIRECT_BEARING`.
+- Clarified that limited-condition no-effect findings must remain
+  bounded to the tested condition.
+- Clarified that non-significant or imprecise findings are not
+  automatically contrary evidence.
+
+### Preserved
+- DIRECT_SUPPORT and INDIRECT_SUPPORT semantics.
+- CONTRARY_EVIDENCE safeguards.
+- Negative-result integrity.
+- Claim-dependent comparability.
+- No-vote-counting rule.
+- Evidence-overlap safeguards.
+- Narrative-only synthesis boundary.
+- Mandatory six-section output contract.
+
 ## v0.8.1
 
 ### Fixed
