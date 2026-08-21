@@ -152,6 +152,28 @@ scale.
 
 Do not force all studies into one synthesis group.
 
+A comparability group normally contains two or more evidence units.
+
+Do not assign a comparability label to a single evidence unit by
+comparing the study with itself.
+
+When an evidence unit does not fit a meaningful multi-study
+comparability group, retain it as an unclustered or singleton evidence
+unit.
+
+A singleton evidence unit:
+
+- remains part of the evidence set when otherwise eligible;
+- may contribute to later narrative synthesis or claim support;
+- must not be labelled DIRECTLY_COMPARABLE merely because no second
+  study is present;
+- should not receive a within-group comparability judgment until another
+  relevant evidence unit is available for comparison.
+
+Comparability labels describe relationships among evidence units
+relative to the intended synthesis target; they are not intrinsic
+quality labels assigned to individual studies.
+
 When material differences exist, create comparability groups or clusters.
 
 Possible grouping dimensions include:

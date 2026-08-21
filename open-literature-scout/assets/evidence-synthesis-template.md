@@ -78,11 +78,42 @@ Use only:
 
 Create groups only when materially useful.
 
+A comparability group normally requires two or more evidence units.
+
 | Group | Defining characteristics | Evidence units | Within-group comparability |
 |---|---|---|---|
 | | | | |
 
+Use within-group comparability labels only when two or more evidence
+units are actually being compared.
+
+Do not assign DIRECTLY_COMPARABLE, PARTIALLY_COMPARABLE, or
+NOT_DIRECTLY_COMPARABLE to a singleton evidence unit compared with
+itself.
+
 Do not numerically pool incompatible groups.
+
+#### Unclustered / singleton evidence units
+
+Use this subsection only when one or more eligible evidence units do not
+fit a meaningful multi-study comparability group.
+
+| Evidence unit | Reason kept separate | Potential role in later synthesis |
+|---|---|---|
+| | | |
+
+Do not assign a within-group comparability label to a singleton evidence
+unit.
+
+Singleton status does not mean:
+
+- irrelevant evidence;
+- weak evidence;
+- indirect evidence;
+- excluded evidence.
+
+Its contribution must be determined later according to the intended
+synthesis question or claim.
 
 #### Cross-study synthesis
 

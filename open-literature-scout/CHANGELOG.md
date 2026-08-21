@@ -1,5 +1,27 @@
 # Open Literature Scout — Changelog
 
+## v0.8.1
+
+### Fixed
+- Clarified that comparability is a relationship among evidence units
+  relative to an intended synthesis target.
+- Prevented singleton evidence units from being labelled
+  DIRECTLY_COMPARABLE by comparison with themselves.
+- Added explicit handling for unclustered/singleton evidence units.
+- Clarified that singleton status does not imply irrelevance, weakness,
+  indirectness, or exclusion.
+
+### Preserved
+- NONE, NARRATIVE_SYNTHESIS, and CLAIM_SUPPORT modes.
+- Claim-dependent comparability.
+- Comparability-group clustering.
+- No-vote-counting safeguard.
+- Evidence-overlap safeguards.
+- Heterogeneity-versus-conflict distinction.
+- Narrative-only synthesis boundary.
+- Mandatory six-section output contract.
+
+
 ## v0.8
 
 ### Added

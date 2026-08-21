@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8
+Version: 0.8.1
 
 ## Purpose
 
@@ -556,6 +556,15 @@ assets/evidence-synthesis-template.md
 
 Before synthesizing, define the evidence set and assess study
 comparability.
+
+Comparability is a relationship among evidence units relative to the
+intended synthesis target.
+
+Do not assign a comparability label to a singleton evidence unit by
+comparing the study with itself.
+
+Keep eligible singleton evidence units separate until a meaningful
+comparison or synthesis role can be established.
 
 Use only these comparability labels:
 
