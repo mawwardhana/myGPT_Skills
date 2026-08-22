@@ -40,3 +40,51 @@ When equivalent sources exist, prefer:
 - Author manuscripts legally deposited in repositories
 
 Do not describe an article as open access unless this has been verified.
+
+## Clean-link and stable-identifier policy
+
+User-facing scholarly links should identify the source without relying on
+tracking or referral parameters.
+
+When available, prefer stable scholarly identifiers such as:
+
+- DOI
+- PMID
+- PMCID
+- stable publisher record
+- stable repository record
+
+Remove tracking parameters from canonical source URLs when they are under
+the assistant's control.
+
+Examples of parameters that should not be intentionally preserved
+include:
+
+- utm_source
+- utm_medium
+- utm_campaign
+- referral parameters
+- tracking identifiers
+
+Do not claim that a rendered hyperlink is tracking-free unless the
+user-visible destination can actually be represented without tracking
+parameters.
+
+If a client, interface, or rendering layer may rewrite a clickable URL,
+prefer a stable scholarly identifier rather than presenting the
+tracking-bearing rendered URL as a clean canonical link.
+
+Acceptable fallbacks include:
+
+- DOI plus source name;
+- PMID plus PubMed;
+- PMCID plus repository/source name;
+- source name plus another stable identifier;
+- canonical URL rendered as plain or code text when necessary.
+
+Interface-added tracking parameters must not be treated as part of the
+scholarly source identity.
+
+The objective is source-identification integrity, not a guarantee that
+every user interface will preserve the exact URL string supplied by the
+assistant.

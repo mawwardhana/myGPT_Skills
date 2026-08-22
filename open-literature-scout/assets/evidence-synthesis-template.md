@@ -165,6 +165,32 @@ or methodological context.
 Report the controlled comparability judgment separately at the
 pair/group level.
 
+Study-contribution integrity check:
+
+The selected study-contribution label must be supported by the
+corresponding extracted finding.
+
+Do not assign `DIRECT_SUPPORT` when the row only establishes that the
+study:
+
+- used the requested intervention or material;
+- studied the requested organism or population; or
+- measured a claim-relevant outcome.
+
+`DIRECT_SUPPORT` requires a verified extracted finding that materially
+supports the specific claim.
+
+Before assigning `DIRECT_SUPPORT`, verify that the `Key finding` field
+actually contains a claim-supporting result.
+
+If the study is directly relevant but the direction of the finding is
+not available or cannot be verified from the extraction basis, use:
+
+`DIRECT_INCONCLUSIVE_EVIDENCE`
+
+Do not infer a positive finding from study relevance, title, objective,
+assay type, or evidence status.
+
 #### Claim assessment
 
 Use this subsection only when:

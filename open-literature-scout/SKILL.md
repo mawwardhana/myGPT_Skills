@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8.3
+Version: 0.8.4
 
 ## Purpose
 
@@ -588,6 +588,30 @@ Do not convert non-significance, limited-condition testing, or
 incomplete direct evidence into CONTRARY_EVIDENCE without sufficient
 claim alignment.
 
+Study-contribution labels must be supported by the extracted finding,
+not merely by topical or methodological alignment with the claim.
+
+Do not assign DIRECT_SUPPORT solely because a study:
+
+- uses the requested material or intervention;
+- studies the requested organism or population;
+- measures a claim-relevant outcome; or
+- is otherwise directly relevant to the claim.
+
+DIRECT_SUPPORT requires an extracted finding that materially supports
+the specific claim.
+
+If a study directly investigates the claim-relevant outcome but the
+direction or result cannot be verified from the available extraction
+basis, do not infer a positive finding.
+
+Use DIRECT_INCONCLUSIVE_EVIDENCE when the study is directly relevant but
+the available evidence does not permit a defensible support-versus-
+contrary classification.
+
+Topical relevance or direct study alignment must never be converted
+into an unverified positive result.
+
 and only these claim-assessment labels:
 
 - SUPPORTED
@@ -796,6 +820,29 @@ Remove parameters such as:
 - referral parameters
 
 Prefer DOI, PMID, PMCID, or the clean canonical publisher URL.
+
+Do not claim that tracking parameters were removed unless the
+user-visible source representation is actually clean.
+
+If a clickable canonical URL cannot be guaranteed to remain unmodified
+by the client, interface, or rendering layer, prefer a stable scholarly
+identifier rather than presenting a tracking-bearing URL as a clean
+canonical URL.
+
+Preferred fallbacks include:
+
+- DOI;
+- PMID;
+- PMCID;
+- source name plus stable identifier;
+- canonical URL rendered as plain or code text when necessary.
+
+Do not treat interface-added tracking parameters as part of the
+scholarly source identity.
+
+When a clean clickable destination cannot be guaranteed, report the
+stable identifier or plain canonical target without claiming that a
+rendered hyperlink is tracking-free.
 
 
 ### Step 7 — Mandatory output contract

@@ -259,6 +259,48 @@ Use only:
 Use when the study directly measures evidence relevant to the claim in a
 sufficiently aligned population, intervention, and outcome.
 
+DIRECT_SUPPORT requires both:
+
+1. direct alignment with the specific claim; and
+2. an extracted finding that materially supports that claim.
+
+Direct alignment alone is not sufficient.
+
+A study must not receive DIRECT_SUPPORT merely because it:
+
+- uses the requested material or intervention;
+- studies the requested organism or population;
+- measures a claim-relevant outcome; or
+- has a design that could directly test the claim.
+
+The direction of the relevant finding must be supported by the available
+extraction basis.
+
+If the study directly investigates the claim-relevant outcome but the
+finding direction cannot be verified, use:
+
+`DIRECT_INCONCLUSIVE_EVIDENCE`
+
+rather than inferring support.
+
+For example:
+
+study design directly tests native chitosan against S. aureus
++
+antibacterial outcome is mentioned
++
+the accessible abstract does not report whether inhibition occurred
+
+does not justify:
+
+`DIRECT_SUPPORT`
+
+It should remain:
+
+`DIRECT_INCONCLUSIVE_EVIDENCE`
+
+until the claim-supporting finding can be verified.
+
 ### INDIRECT_SUPPORT
 
 Use when the study contributes mechanistic, contextual, adjacent, or

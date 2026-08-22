@@ -1,5 +1,43 @@
 # Open Literature Scout — Changelog
 
+## v0.8.4
+
+### Fixed
+- Added study-contribution integrity so DIRECT_SUPPORT requires a
+  verified extracted finding that materially supports the specific
+  claim.
+- Prevented direct study alignment, topical relevance, or outcome
+  measurement alone from being interpreted as DIRECT_SUPPORT.
+- Required directly relevant studies with unverified or indeterminate
+  finding direction to use DIRECT_INCONCLUSIVE_EVIDENCE when
+  appropriate.
+- Added claim-support-map integrity checks linking contribution labels
+  to the extracted key finding.
+- Strengthened clean-link handling when interface or rendering layers
+  may rewrite clickable URLs.
+- Added stable-identifier fallback using DOI, PMID, PMCID, source name,
+  or plain canonical target representation.
+- Clarified that interface-added tracking parameters are not part of
+  scholarly source identity.
+
+### Preserved
+- Exact controlled evidence-status and full-text-access labels.
+- Per-study STRUCTURED_SCOUT_APPRAISAL with nine domains.
+- Appraisal-basis integrity.
+- Condition-linked quantitative extraction.
+- Relational comparability rendering.
+- Claim-dependent comparability.
+- Singleton comparability integrity.
+- DIRECT_INCONCLUSIVE_EVIDENCE semantics.
+- Negative-result integrity.
+- No-vote-counting safeguard.
+- Evidence-overlap safeguards.
+- Heterogeneity-versus-conflict distinction.
+- Appraisal without numerical scoring.
+- Claim-scope and generalizability safeguards.
+- Narrative-only synthesis boundary.
+- Mandatory six-section output contract.
+
 ## v0.8.3
 
 ### Fixed
