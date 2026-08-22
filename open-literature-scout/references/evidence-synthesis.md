@@ -174,6 +174,35 @@ Comparability labels describe relationships among evidence units
 relative to the intended synthesis target; they are not intrinsic
 quality labels assigned to individual studies.
 
+### Comparability rendering rule
+
+Do not attach a controlled comparability label to a study merely because
+the study belongs to a comparability group.
+
+For example, do not render:
+
+`Study A — PARTIALLY_COMPARABLE`
+
+without identifying what Study A is being compared with.
+
+In study-level synthesis tables, use a field such as:
+
+`Comparability group / context`
+
+with values such as:
+
+`G1 — native chitosan / S. aureus / broth MIC`
+
+The controlled comparability label belongs to the relationship or group
+assessment, for example:
+
+`G1 within-group comparability: PARTIALLY_COMPARABLE`.
+
+The same evidence unit may participate in more than one
+outcome-specific comparability group when justified, but this must not
+cause the study to be counted more than once as an independent evidence
+unit.
+
 When material differences exist, create comparability groups or clusters.
 
 Possible grouping dimensions include:

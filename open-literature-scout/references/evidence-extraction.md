@@ -220,6 +220,33 @@ and distinguish it from a value directly reported by the article.
 
 Do not invent missing numerical values.
 
+### Condition-linked quantitative extraction
+
+A numerical value must not be detached from the experimental condition
+that produced it.
+
+When a source reports more than one value for the same nominal outcome,
+preserve each distinct value together with its context.
+
+For example:
+
+| Condition | Outcome | Value |
+|---|---|---|
+| Medium A, 24 h | MIC | value |
+| Medium B, 24 h | MIC | value |
+| Parent strain, experiment 1 | MBC | value |
+| Parent strain, experiment 2 | MBC | value |
+
+Do not silently select one value as the representative result when
+another value is reported under a different experimental condition,
+table, subgroup, or experiment.
+
+Do not average, reconcile, or infer equivalence between such values
+unless the source explicitly provides that analysis.
+
+If the distinction cannot be verified, report the ambiguity and use
+NOT_VERIFIED where appropriate.
+
 ## Multiple-group rule
 
 When a study contains multiple relevant groups, interventions,

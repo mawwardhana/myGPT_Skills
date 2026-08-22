@@ -1,5 +1,38 @@
 # Open Literature Scout — Changelog
 
+## v0.8.3
+
+### Fixed
+- Added a final integration preflight for controlled-label integrity.
+- Required exact rendering of evidence-state and full-text-access
+  vocabularies.
+- Required STRUCTURED_SCOUT_APPRAISAL to be rendered per evidence unit
+  with explicit appraisal basis and all nine domains.
+- Prevented aggregate appraisal from replacing study-level appraisal.
+- Prevented comparability labels from being treated as intrinsic
+  study-level properties.
+- Added explicit comparability-group/context rendering for claim-support
+  maps.
+- Strengthened condition-linked quantitative extraction when one source
+  reports multiple values for the same nominal outcome.
+- Added extraction-basis traceability checks.
+- Added final clean-link removal of tracking and referral parameters.
+
+### Preserved
+- Evidence-state semantics.
+- DOI-verification semantics.
+- Claim-dependent comparability.
+- Singleton comparability integrity.
+- DIRECT_INCONCLUSIVE_EVIDENCE.
+- Negative-result integrity.
+- No-vote-counting safeguard.
+- Evidence-overlap safeguards.
+- Heterogeneity-versus-conflict distinction.
+- Appraisal without numerical scoring.
+- Claim-scope and generalizability safeguards.
+- Narrative-only synthesis boundary.
+- Mandatory six-section output contract.
+
 ## v0.8.2
 
 ### Fixed

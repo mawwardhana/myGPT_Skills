@@ -148,9 +148,22 @@ inconclusive to materially support or oppose the claim.
 
 Do not use it when the relevant outcome was not measured.
 
-| Evidence unit | Evidence status | Comparability | Study contribution | Key finding | Appraisal consideration | Relevance to claim |
+| Evidence unit | Evidence status | Comparability group / context | Study contribution | Key finding | Appraisal consideration | Relevance to claim |
 |---|---|---|---|---|---|---|
 | | | | | | | |
+
+
+Comparability labels are relational.
+
+Do not place DIRECTLY_COMPARABLE, PARTIALLY_COMPARABLE, or
+NOT_DIRECTLY_COMPARABLE in an individual-study row unless the row
+explicitly identifies the comparison relationship.
+
+Use the study-level field to identify the relevant comparability group
+or methodological context.
+
+Report the controlled comparability judgment separately at the
+pair/group level.
 
 #### Claim assessment
 

@@ -224,6 +224,39 @@ When source information is insufficient, use:
 for the affected appraisal domain or item where compatible with the
 selected appraisal approach.
 
+### Per-study appraisal rendering rule
+
+When appraisal is active, appraisal is an evidence-unit-level
+assessment.
+
+Each appraised study must explicitly report:
+
+`Appraisal basis: FULL_TEXT / ABSTRACT_ONLY / METADATA_ONLY /
+USER_PROVIDED_INFORMATION`
+
+followed by all nine applicable Scout domains.
+
+Do not replace study-level appraisal with a single aggregate appraisal
+of the whole evidence set.
+
+An aggregate methodological summary may be provided only after the
+individual study appraisals have been completed.
+
+Each domain must contain exactly one allowed domain label:
+
+- ADEQUATELY_ADDRESSED
+- PARTIALLY_ADDRESSED
+- NOT_ADDRESSED
+- NOT_VERIFIED
+- NOT_APPLICABLE
+
+Do not create ranges, hybrid labels, averages, percentages, or
+cross-study domain scores.
+
+For ABSTRACT_ONLY or METADATA_ONLY appraisal, use NOT_VERIFIED whenever
+the available source does not permit a defensible domain judgment.
+
+
 ## Reported-information versus judgment rule
 
 Separate:

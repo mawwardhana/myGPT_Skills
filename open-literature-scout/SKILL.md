@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8.2
+Version: 0.8.3
 
 ## Purpose
 
@@ -664,6 +664,138 @@ Do not apply domain-specific rules to unrelated research topics.
 For chitosan-related literature searches, use:
 
 references/chitosan-screening.md
+
+
+### Final integration preflight
+
+Before rendering the final answer, perform a final integrity check across
+retrieval, extraction, appraisal, and synthesis.
+
+#### Controlled-label integrity
+
+Render controlled labels exactly as defined.
+
+Evidence status must be exactly one of:
+
+- CONFIRMED
+- PROBABLE
+- UNVERIFIED
+- EXCLUDED
+
+DOI verification must use only the allowed DOI-verification labels.
+
+Full-text access must be exactly one of:
+
+- Open access
+- Free full text
+- Subscription/paywalled
+- Status not verified
+
+Do not append explanations inside a controlled-label field.
+
+For example, do not write:
+
+`EXCLUDED from the core evidence set`
+
+in an evidence-status field.
+
+Instead write:
+
+`EXCLUDED`
+
+and place the explanation in a separate reason field.
+
+#### Appraisal-completeness integrity
+
+When STRUCTURED_SCOUT_APPRAISAL is active, appraisal must be performed
+and rendered per evidence unit.
+
+For every appraised study:
+
+- report the appraisal basis;
+- assess all nine Scout domains individually;
+- use exactly one permitted domain label for each domain;
+- use NOT_VERIFIED when available information does not support a domain
+  judgment.
+
+A cross-study appraisal summary may be added only after the per-study
+appraisals.
+
+A cross-study summary must never replace the required per-study
+appraisals.
+
+Do not create combined domain labels such as:
+
+`ADEQUATELY_ADDRESSED to PARTIALLY_ADDRESSED`.
+
+#### Comparability-rendering integrity
+
+Comparability labels describe relationships among evidence units
+relative to the intended synthesis target.
+
+Do not render DIRECTLY_COMPARABLE, PARTIALLY_COMPARABLE, or
+NOT_DIRECTLY_COMPARABLE as an intrinsic property of an individual study.
+
+In a study-level claim-support map, report the study's:
+
+`Comparability group / context`
+
+rather than assigning the study itself a comparability label.
+
+Place the controlled comparability judgment at the pairwise or
+comparability-group level.
+
+#### Quantitative-context integrity
+
+Every extracted quantitative result must remain linked to the
+experimental context in which it was reported.
+
+Preserve, where applicable:
+
+- material/preparation;
+- organism and strain;
+- assay;
+- medium;
+- concentration;
+- timepoint;
+- comparator/control;
+- outcome definition;
+- subgroup or experimental condition.
+
+If the same paper reports different numerical values for the nominally
+same outcome under different tables, conditions, experiments, or
+subgroups, do not select one as a universal value.
+
+Report the values separately with their conditions.
+
+If the context of a value cannot be established, use the appropriate
+NOT_VERIFIED terminology rather than collapsing or reconciling the
+values.
+
+#### Extraction-basis traceability
+
+FULL_TEXT may be used only when the full article content was actually
+inspected.
+
+ABSTRACT_ONLY and METADATA_ONLY must not be expanded with details that
+require unavailable full text.
+
+Extraction basis and appraisal basis must be reported independently.
+
+#### Clean-link preflight
+
+Before final output, remove tracking parameters from user-facing source
+links.
+
+Remove parameters such as:
+
+- utm_source
+- utm_medium
+- utm_campaign
+- tracking identifiers
+- referral parameters
+
+Prefer DOI, PMID, PMCID, or the clean canonical publisher URL.
 
 
 ### Step 7 — Mandatory output contract

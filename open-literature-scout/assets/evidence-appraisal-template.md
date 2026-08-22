@@ -127,6 +127,40 @@ State explicitly:
 > used by this skill and is not a validated formal risk-of-bias
 > instrument.
 
+#### Mandatory per-study appraisal
+
+Render this structured scout appraisal separately for every evidence
+unit being appraised.
+
+For each study, explicitly report:
+
+**Study:** [study identifier]
+
+**Appraisal mode:** STRUCTURED_SCOUT_APPRAISAL
+
+**Appraisal basis:** FULL_TEXT / ABSTRACT_ONLY / METADATA_ONLY /
+USER_PROVIDED_INFORMATION
+
+Then assess all nine Scout domains in the table below.
+
+Use exactly one allowed domain label per study per domain:
+
+- ADEQUATELY_ADDRESSED
+- PARTIALLY_ADDRESSED
+- NOT_ADDRESSED
+- NOT_VERIFIED
+- NOT_APPLICABLE
+
+Do not replace study-level appraisal with a single aggregate appraisal
+of the whole evidence set.
+
+A cross-study methodological summary may be added only after all
+required study-level appraisals have been completed.
+
+Do not create combined or ranged labels such as:
+
+`ADEQUATELY_ADDRESSED to PARTIALLY_ADDRESSED`
+
 | Scout appraisal domain | Judgment | Basis |
 |---|---|---|
 | Experimental object / material characterization | | |
