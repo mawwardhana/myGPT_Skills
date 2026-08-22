@@ -1,5 +1,46 @@
 # Open Literature Scout — Changelog
 
+## v0.8.5
+
+### Fixed
+- Added cross-location quantitative consistency checks for FULL_TEXT
+  extraction.
+- Required claim-relevant numerical outcomes to be checked across
+  tables, main-text results, figures, supplementary material when
+  inspected, separate experimental series, and subgroup or strain
+  comparisons.
+- Prevented one context-specific numerical value from being selected as
+  a universal study result when the same nominal outcome is reported
+  differently elsewhere in the article.
+- Required each differing quantitative result to remain linked to its
+  source location and experimental context.
+- Prohibited unsupported explanations of numerical discrepancies across
+  tables, strains, subgroups, conditions, or experiments.
+- Added `Quantitative context: NOT_VERIFIED` when the reason for
+  differing reported values cannot be established.
+- Added a dedicated quantitative-result context record to the evidence
+  extraction template.
+- Added synthesis-level protection against collapsing multiple
+  context-specific values into one claim-support-map value.
+- Added the concise fallback:
+  `Multiple context-specific values reported; see detailed extraction.`
+
+### Preserved
+- Exact controlled evidence-status and full-text-access labels.
+- Detailed extraction basis rules.
+- Per-study STRUCTURED_SCOUT_APPRAISAL with nine domains.
+- Relational comparability rendering.
+- Claim-dependent comparability.
+- Study-overlap safeguards.
+- DIRECT_SUPPORT finding-integrity requirements.
+- DIRECT_INCONCLUSIVE_EVIDENCE semantics.
+- Negative-result integrity.
+- Condition-dependent heterogeneity safeguards.
+- No vote counting, quality scoring, numerical weighting, or pooling.
+- Stable scholarly identifier fallback.
+- Mandatory six-section output contract.
+
+
 ## v0.8.4
 
 ### Fixed

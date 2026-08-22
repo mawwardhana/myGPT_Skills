@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8.4
+Version: 0.8.5
 
 ## Purpose
 
@@ -795,6 +795,66 @@ Report the values separately with their conditions.
 If the context of a value cannot be established, use the appropriate
 NOT_VERIFIED terminology rather than collapsing or reconciling the
 values.
+
+#### Cross-location quantitative consistency
+
+When FULL_TEXT extraction contains quantitative outcomes, do not stop
+after locating the first apparently relevant value.
+
+Before finalizing a quantitative result, cross-check the inspected
+article for other reported values of the same nominal outcome in:
+
+- tables;
+- main-text results;
+- figures;
+- supplementary material when inspected;
+- separate experimental series;
+- subgroup or strain comparisons.
+
+If the same study reports different values for the same nominal outcome,
+do not assume that one value supersedes the other merely because it
+appears later in the article.
+
+Preserve each reported value together with:
+
+- source location such as table, figure, or text;
+- organism and strain;
+- material/preparation;
+- medium or experimental condition when available;
+- timepoint;
+- experiment or comparison context;
+- number or type of determinations when reported.
+
+For example:
+
+`Table 1 / SG511 / CAMHB / MBC / 62.5 μg/mL / at least three determinations`
+
+and:
+
+`Table 3 / SG511 parent strain / MBC / 31.3 μg/mL / two determinations`
+
+must remain separate records unless the source explicitly states that
+one value corrects, replaces, or supersedes the other.
+
+Do not explain a numerical discrepancy by assigning it to another
+strain, subgroup, condition, or experiment unless the source supports
+that attribution.
+
+When the reason for differing values cannot be established, report the
+difference transparently and use:
+
+`Quantitative context: NOT_VERIFIED`
+
+where appropriate.
+
+A downstream synthesis table or claim-support map must not select one
+of multiple context-dependent values as the study's universal result.
+
+When a concise synthesis table cannot display all values, write:
+
+`Multiple context-specific values reported; see detailed extraction.`
+
+and preserve the complete values in the detailed extraction.
 
 #### Extraction-basis traceability
 

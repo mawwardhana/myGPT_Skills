@@ -247,6 +247,74 @@ unless the source explicitly provides that analysis.
 If the distinction cannot be verified, report the ambiguity and use
 NOT_VERIFIED where appropriate.
 
+### Cross-location quantitative consistency
+
+For FULL_TEXT extraction, quantitative verification must include a
+cross-location check within the inspected article.
+
+Do not finalize a numerical outcome after locating only the first
+apparently relevant value.
+
+For each claim-relevant quantitative outcome, check other inspected
+locations where the same nominal outcome may also be reported,
+including:
+
+- tables;
+- main-text results;
+- figures;
+- supplementary material when inspected;
+- separate experimental series;
+- subgroup or strain comparisons.
+
+When the same study reports different numerical values for the same
+nominal outcome, preserve each value as a separate context-linked
+record unless the source explicitly states that one value corrects,
+replaces, or supersedes another.
+
+Each retained quantitative record should preserve, when available:
+
+- source location;
+- organism and strain;
+- material or preparation;
+- assay;
+- medium or experimental condition;
+- concentration or dose;
+- timepoint;
+- experiment or comparison context;
+- number or type of determinations;
+- reported numerical value and unit.
+
+Do not resolve a discrepancy by guessing that one value belongs to a
+different strain, subgroup, condition, or experiment.
+
+Such attribution is allowed only when supported by the source.
+
+If the source reports different values but the reason for the
+difference cannot be verified, retain the values separately and state:
+
+`Quantitative context: NOT_VERIFIED`
+
+Do not average, reconcile, prioritize, or silently choose one of the
+values.
+
+A concise downstream table may summarize the study as:
+
+`Multiple context-specific values reported; see detailed extraction.`
+
+but the detailed extraction must preserve all verified context-specific
+values.
+
+For example, if one article reports:
+
+`Table 1 / S. aureus SG511 / MBC / 62.5 μg/mL`
+
+and elsewhere reports:
+
+`Table 3 / S. aureus SG511 parent strain / MBC / 31.3 μg/mL`
+
+both values must remain visible unless the article explicitly states
+that one supersedes the other.
+
 ## Multiple-group rule
 
 When a study contains multiple relevant groups, interventions,

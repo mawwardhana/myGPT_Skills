@@ -94,3 +94,60 @@ limit direct comparison across the extracted studies.
 
 Do not imply quantitative comparability when study methods or outcomes
 are materially different.
+
+## Quantitative-result context record
+
+When FULL_TEXT extraction identifies quantitative results, preserve each
+materially distinct reported value together with its source location and
+experimental context.
+
+Use one record per context-specific value:
+
+| Field | Extracted information |
+|---|---|
+| Outcome | |
+| Reported value | |
+| Unit | |
+| Source location | |
+| Organism / strain | |
+| Material / preparation | |
+| Assay | |
+| Medium / experimental condition | |
+| Concentration / dose | |
+| Timepoint | |
+| Experiment / comparison context | |
+| Determinations / replication context | |
+| Quantitative context note | |
+
+If the same nominal outcome is reported more than once in different
+tables, figures, text passages, experimental series, subgroups, strains,
+or conditions, create separate records rather than selecting one value.
+
+Example:
+
+| Field | Record 1 | Record 2 |
+|---|---|---|
+| Outcome | MBC | MBC |
+| Reported value | 62.5 μg/mL | 31.3 μg/mL |
+| Source location | Table 1 | Table 3 |
+| Organism / strain | S. aureus SG511 | S. aureus SG511 parent strain |
+| Experiment / comparison context | Table 1 susceptibility experiment | Table 3 parent-strain comparison |
+| Determinations / replication context | At least three determinations | Two determinations |
+
+Do not infer that one value replaces the other unless the source
+explicitly states that it is a correction, replacement, or superseding
+result.
+
+If the reason for the discrepancy cannot be verified, retain both values
+and state:
+
+`Quantitative context: NOT_VERIFIED`
+
+In concise downstream synthesis tables, do not select one
+context-dependent value as the study-wide result.
+
+Instead use:
+
+`Multiple context-specific values reported; see detailed extraction.`
+
+when all values cannot be shown without loss of context.

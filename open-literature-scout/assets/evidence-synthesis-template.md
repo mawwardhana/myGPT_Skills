@@ -191,6 +191,33 @@ not available or cannot be verified from the extraction basis, use:
 Do not infer a positive finding from study relevance, title, objective,
 assay type, or evidence status.
 
+Quantitative-summary integrity check:
+
+Before placing a numerical result in the claim-support map, compare the
+entry against the detailed extraction for that study.
+
+If the detailed extraction contains multiple context-specific values for
+the same nominal outcome, do not select one value as the study-wide
+representative result unless the source explicitly identifies it as the
+primary, corrected, replacement, or superseding value.
+
+When all relevant values can be displayed without losing context,
+preserve them together with their source-location or experimental-context
+labels.
+
+When the claim-support map needs a concise representation, use:
+
+`Multiple context-specific values reported; see detailed extraction.`
+
+rather than selecting one context-dependent value.
+
+A study-contribution label may still be assigned from the verified
+direction of the finding when appropriate, but the numerical summary
+must not collapse materially different reported values.
+
+The claim-support map must remain consistent with the complete
+quantitative record in the detailed extraction.
+
 #### Claim assessment
 
 Use this subsection only when:
