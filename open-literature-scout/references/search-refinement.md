@@ -498,6 +498,95 @@ Do not silently discard a plausible counter-evidence candidate.
 The ledger is a retrieval-integrity device, not an additional evidence
 state.
 
+### Candidate-resolution handoff
+
+Candidate-ledger resolution must remain traceable into the downstream
+evidence set.
+
+When a candidate is marked:
+
+`retained as evidence`
+
+the same scholarly study must appear in selected literature or another
+explicit downstream evidence record.
+
+If a candidate is retained as:
+
+- contrary evidence;
+- claim-limiting evidence;
+- inconclusive evidence; or
+- another synthesis-relevant evidence unit,
+
+it must not disappear after the retrieval stage.
+
+A candidate may be omitted from the downstream selected evidence set
+only when its resolution is explicitly recorded as:
+
+- `EXCLUDED` with reason;
+- `UNVERIFIED`;
+- duplicate or overlapping record;
+- outside claim scope after screening.
+
+Do not silently change:
+
+`retained as evidence`
+
+into an omitted record.
+
+If a candidate's screening decision changes after further verification,
+update the candidate ledger and report the revised resolution.
+
+The required traceability path is:
+
+candidate ledger
+→ screening resolution
+→ selected literature
+→ extraction when performed
+→ synthesis when performed.
+
+### Unique evidence-unit deduplication
+
+Before finalizing selected literature, deduplicate scholarly records into
+unique evidence units.
+
+Multiple discovery, verification, or access records for the same article
+must not be counted as separate evidence units.
+
+Use available identifiers to identify duplicates, including:
+
+- DOI;
+- PMID;
+- PMCID;
+- exact article title;
+- other stable scholarly identifiers.
+
+Examples of records that normally represent one evidence unit include:
+
+- publisher record + PubMed record;
+- publisher record + repository full text;
+- PubMed record + PMC full text;
+- Crossref metadata + publisher record;
+- multiple access routes to the same DOI.
+
+Do not create an additional selected-literature row solely because the
+same study was:
+
+- verified through another scholarly source;
+- found through another search strategy;
+- accessed through another full-text location;
+- re-screened during counter-evidence retrieval.
+
+Instead, consolidate those verification and access details into the
+single selected-literature record.
+
+A study may be represented as more than one evidence unit only when the
+source itself contains genuinely separable studies, datasets, cohorts,
+experiments, or evidence units and the workflow explicitly documents why
+they are being treated separately.
+
+After deduplication, evidence counts must refer to unique evidence units,
+not the number of discovery or verification records.
+
 ### Counter-evidence completion rule
 
 A claim-focused search may be considered ready for final adequacy

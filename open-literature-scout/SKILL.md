@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8.7
+Version: 0.8.8
 
 ## Purpose
 
@@ -814,6 +814,92 @@ Do not infer that no contrary evidence exists.
 Final `ADEQUATE` diagnosis and stopping decisions require completion of
 both the target-preserving and target-relaxed counter-evidence discovery
 strategies, unless a documented source limitation prevents one of them.
+
+#### Candidate-ledger handoff integrity
+
+A counter-evidence candidate ledger must remain consistent with the
+downstream evidence set.
+
+When a candidate is resolved as:
+
+`retained as evidence`
+
+the same scholarly study must appear in the downstream selected
+literature or evidence set unless its resolution is explicitly revised
+and the reason for that revision is reported.
+
+When a candidate is retained as claim-limiting, contrary, inconclusive,
+or otherwise synthesis-relevant evidence, preserve that evidence unit in
+the appropriate downstream evidence record rather than allowing it to
+disappear after retrieval.
+
+Do not label a candidate `retained as evidence` if it will subsequently
+be omitted from the selected evidence set without explanation.
+
+Candidate resolution must therefore remain traceable across:
+
+candidate ledger
+→ screening decision
+→ selected literature
+→ extraction when performed
+→ synthesis when performed.
+
+A downstream omission is allowed only when the record is explicitly
+resolved as:
+
+- `EXCLUDED` with reason;
+- `UNVERIFIED`;
+- duplicate or overlapping record;
+- outside claim scope after screening.
+
+Do not silently change a candidate's resolution between retrieval and
+downstream reporting.
+
+#### Unique evidence-unit integrity
+
+A scholarly study must appear only once as an evidence unit in the
+selected literature unless the source itself contains genuinely
+separable studies or datasets that the workflow explicitly treats as
+distinct evidence units.
+
+Multiple verification sources do not create multiple evidence units.
+
+For example:
+
+- publisher verification;
+- PubMed verification;
+- repository full text;
+- PMC full text;
+- Crossref metadata
+
+may all support the same article identity, but the article remains one
+evidence unit.
+
+Do not create a second selected-literature row merely to represent:
+
+- full-text verification;
+- cross-channel verification;
+- an alternate access route;
+- an additional bibliographic source;
+- the same DOI, PMID, PMCID, title, or study record.
+
+Instead, consolidate verification and access information into the single
+study record.
+
+Before finalizing the selected literature, check for duplicate evidence
+units using available stable identifiers such as:
+
+- DOI;
+- PMID;
+- PMCID;
+- exact article title;
+- other stable scholarly identifiers.
+
+If two records resolve to the same scholarly study, merge them unless
+there is a defensible reason to treat them as separate evidence units.
+
+Evidence-unit counts in Search quality must be based on unique evidence
+units after this deduplication check.
 
 #### Controlled-label integrity
 

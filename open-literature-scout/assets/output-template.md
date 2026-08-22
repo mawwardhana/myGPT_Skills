@@ -165,9 +165,39 @@ query when title-mismatch risk is relevant.
 Report each plausible counter-evidence or title-mismatch candidate that
 was retained during refinement until resolution.
 
-| Candidate | Why retained | Discovery strategy | Verification status | Final resolution |
-|---|---|---|---|---|
-| | | | | |
+| Candidate | Why retained | Discovery strategy | Verification status | Final resolution | Downstream evidence record |
+|---|---|---|---|---|---|
+| | | | | | |
+
+Candidate-handoff integrity check:
+
+Any candidate resolved as:
+
+`retained as evidence`
+
+must have a corresponding downstream evidence record.
+
+Candidates retained as contrary, claim-limiting, inconclusive, or other
+synthesis-relevant evidence must also remain traceable into the
+downstream evidence set.
+
+Do not allow a candidate to disappear after retrieval without an explicit
+resolution.
+
+If a candidate's final screening decision changes, update both:
+
+- `Final resolution`; and
+- `Downstream evidence record`.
+
+Before finalizing the report, cross-check:
+
+candidate ledger
+→ screening resolution
+→ selected literature
+→ extraction when performed
+→ synthesis when performed.
+
+Every candidate marked `retained as evidence` must be accounted for.
 
 A candidate must not disappear between search iterations without an
 explicit resolution.
@@ -254,6 +284,51 @@ Use only the Full-text access labels defined in `SKILL.md`.
 When a relevant domain-specific reference file requires an additional
 classification field, add that field to this table without removing
 the mandatory columns above.
+
+### Unique evidence-unit check
+
+Before finalizing selected literature, verify that each scholarly study
+appears only once as an evidence unit.
+
+Multiple scholarly records used to discover, verify, or access the same
+study must be consolidated into one selected-literature row.
+
+Do not create separate evidence-unit rows for:
+
+- publisher verification;
+- PubMed verification;
+- PMC access;
+- repository access;
+- Crossref metadata;
+- alternate full-text locations;
+- rediscovery through another search strategy.
+
+Use available stable identifiers to detect duplicates:
+
+- DOI;
+- PMID;
+- PMCID;
+- exact article title;
+- other stable scholarly identifiers.
+
+If multiple records resolve to the same article, merge them into one
+evidence-unit record and preserve the relevant verification/access
+information within that record.
+
+A study may appear more than once only when genuinely separable studies,
+datasets, cohorts, experiments, or evidence units are explicitly
+documented.
+
+Report:
+
+`Unique evidence-unit check: PASS`
+
+only when:
+
+- no duplicate scholarly study remains as multiple selected-literature
+  rows; and
+- every candidate marked `retained as evidence` is traceable to a
+  downstream evidence record.
 
 ### Evidence extraction mode
 
@@ -367,6 +442,11 @@ If no records exist in a category, state:
 
 
 ## 6. Search quality
+
+**Unique selected evidence units:** 
+
+Evidence-unit counts must be based on deduplicated scholarly studies,
+not the number of discovery, verification, or access records.
 
 Confirmed studies:  
 Probable studies:  

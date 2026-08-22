@@ -1,5 +1,55 @@
 # Open Literature Scout — Changelog
 
+## v0.8.8
+
+### Fixed
+- Added candidate-ledger handoff integrity from retrieval through
+  downstream evidence reporting.
+- Required every candidate resolved as `retained as evidence` to remain
+  traceable into selected literature or another explicit downstream
+  evidence record.
+- Prevented contrary, claim-limiting, inconclusive, or other
+  synthesis-relevant candidates from disappearing after retrieval.
+- Required candidate-resolution changes to be explicitly updated rather
+  than silently changing between search iterations and downstream
+  reporting.
+- Added unique evidence-unit integrity so one scholarly study is counted
+  as one evidence unit regardless of how many discovery, verification,
+  or access channels were used.
+- Prevented publisher, PubMed, PMC, repository, Crossref, or alternate
+  full-text records for the same article from creating duplicate
+  selected-literature rows.
+- Added stable-identifier-based deduplication using DOI, PMID, PMCID,
+  exact article title, and other scholarly identifiers.
+- Required Search quality evidence counts to use deduplicated unique
+  evidence units.
+- Added downstream-evidence-record traceability to the counter-evidence
+  candidate ledger.
+- Added an auditable `Unique evidence-unit check` to the output
+  template.
+
+### Preserved
+- Independent counter-evidence discovery using complementary Strategy A
+  and Strategy B.
+- Retrieval-channel diversity.
+- Counter-evidence candidate ledger.
+- Exact controlled evidence-status and full-text-access labels.
+- DOI-verification controlled labels.
+- Native-chitosan versus derivative/formulation screening integrity.
+- Detailed extraction and extraction-basis rules.
+- Cross-location quantitative consistency.
+- Context-linked quantitative-result records.
+- Per-study STRUCTURED_SCOUT_APPRAISAL with nine domains.
+- Relational comparability rendering.
+- Study-overlap safeguards.
+- DIRECT_SUPPORT finding-integrity requirements.
+- DIRECT_INCONCLUSIVE_EVIDENCE semantics.
+- Negative-result integrity.
+- Condition-dependent heterogeneity safeguards.
+- No vote counting, quality scoring, numerical weighting, or pooling.
+- Stable scholarly identifier fallback.
+- Mandatory six-section output contract.
+
 ## v0.8.7
 
 ### Fixed
