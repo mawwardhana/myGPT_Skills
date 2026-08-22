@@ -383,6 +383,141 @@ Relevant records discovered during earlier iterations may reveal:
 Use those observations for targeted refinement when they could
 materially affect claim-level retrieval.
 
+### Independent counter-evidence discovery
+
+For claim-focused retrieval, the counter-evidence check must use at
+least two complementary discovery strategies when title-mismatch risk is
+plausible.
+
+Minor variations of the original supporting query are not sufficient.
+
+#### Strategy A — target-preserving, effect-neutral retrieval
+
+Retain:
+
+- the intervention, material, exposure, or phenomenon; and
+- the target organism, population, or relevant outcome context.
+
+Remove any requirement for a positive-effect term.
+
+For example:
+
+`chitosan AND "Staphylococcus aureus"`
+
+may be used without requiring:
+
+`antibacterial`
+
+`effective`
+
+`inhibition`
+
+or equivalent positive-effect terminology.
+
+This strategy reduces effect-direction retrieval bias while preserving
+the target.
+
+#### Strategy B — target-relaxed title-mismatch retrieval
+
+Retain the intervention, material, exposure, or phenomenon, but remove
+the target organism or population from at least one query.
+
+Use broader domain or experimental terms as appropriate.
+
+Examples may include:
+
+`chitosan AND antimicrobial`
+
+`chitosan AND bacteria`
+
+`"native chitosan" AND microorganisms`
+
+or another domain-appropriate broad query.
+
+The purpose is not to treat all retrieved studies as relevant.
+
+The purpose is to discover studies whose title or primary emphasis does
+not foreground the target organism or population.
+
+Candidates identified through this strategy must then be screened for
+the target evidence in available:
+
+- abstract;
+- keywords;
+- methods;
+- results;
+- tables;
+- figures;
+- supplementary material;
+- full text.
+
+For example, a paper whose title emphasizes Gram-negative bacteria may
+still contain direct experimental evidence for `Staphylococcus aureus`.
+
+#### Retrieval-channel diversity
+
+When feasible, use more than one retrieval channel for counter-evidence
+discovery.
+
+Prefer a combination such as:
+
+- bibliographic index or scholarly database; and
+- publisher, journal, institutional repository, or scholarly full-text
+  discovery.
+
+Do not describe repeated searches through the same retrieval channel as
+independent discovery merely because query terms changed.
+
+If only one meaningful retrieval channel is available, state the source
+limitation explicitly.
+
+### Counter-evidence candidate ledger
+
+Maintain a temporary candidate ledger across search iterations for any
+record that may contain:
+
+- contrary evidence;
+- null findings;
+- inconclusive findings;
+- claim-limiting evidence;
+- title-mismatch evidence.
+
+A candidate entered into this ledger must not disappear merely because a
+later search iteration returns a different evidence set.
+
+Each candidate must eventually be resolved as one of:
+
+- retained for normal evidence screening;
+- `EXCLUDED` with a documented reason;
+- `UNVERIFIED` when verification cannot be completed;
+- duplicate or overlapping record;
+- outside the claim scope after screening.
+
+Do not silently discard a plausible counter-evidence candidate.
+
+The ledger is a retrieval-integrity device, not an additional evidence
+state.
+
+### Counter-evidence completion rule
+
+A claim-focused search may be considered ready for final adequacy
+assessment only when:
+
+1. a target-preserving, effect-neutral pass has been completed;
+2. a target-relaxed title-mismatch pass has been completed when
+   applicable;
+3. plausible counter-evidence candidates have been resolved or explicitly
+   retained as unresolved;
+4. the material effect of those passes on the evidence set has been
+   reported.
+
+Finding condition-dependent limitations alone does not prove that a
+counter-evidence search was complete.
+
+Likewise, technically testing negative terminology alone does not satisfy
+this requirement if the discovery pathway remains effectively identical
+to the supporting search.
+
 ### Interpretation of the check
 
 Finding contrary evidence does not automatically mean the overall

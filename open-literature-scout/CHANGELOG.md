@@ -1,5 +1,51 @@
 # Open Literature Scout — Changelog
 
+## v0.8.7
+
+### Fixed
+- Added independent counter-evidence discovery requirements for
+  claim-focused searches.
+- Required two complementary counter-evidence strategies when
+  title-mismatch risk is plausible:
+  target-preserving effect-neutral retrieval and target-relaxed
+  title-mismatch retrieval.
+- Prevented minor variations of the supporting query from being treated
+  as sufficient independent counter-evidence discovery.
+- Added retrieval-channel diversity guidance so bibliographic-index and
+  publisher/full-text discovery pathways are distinguished when
+  feasible.
+- Added a counter-evidence candidate ledger to preserve plausible
+  contrary, null, inconclusive, claim-limiting, and title-mismatch
+  records across search iterations until resolution.
+- Prevented plausible counter-evidence candidates from disappearing
+  silently when later search iterations return different evidence sets.
+- Required candidate-ledger records to be resolved as retained evidence,
+  EXCLUDED with reason, UNVERIFIED, duplicate/overlap, or outside claim
+  scope after screening.
+- Prevented final ADEQUATE diagnosis from being based solely on abundant
+  supporting evidence, technically tested negative terminology, or a
+  nominal counter-evidence iteration.
+- Added auditable Strategy A, Strategy B, retrieval-channel diversity,
+  and candidate-ledger reporting to the output template.
+
+### Preserved
+- Exact controlled evidence-status and full-text-access labels.
+- DOI-verification controlled labels.
+- Native-chitosan versus derivative/formulation screening integrity.
+- Detailed extraction and extraction-basis rules.
+- Cross-location quantitative consistency.
+- Context-linked quantitative-result records.
+- Per-study STRUCTURED_SCOUT_APPRAISAL with nine domains.
+- Relational comparability rendering.
+- Study-overlap safeguards.
+- DIRECT_SUPPORT finding-integrity requirements.
+- DIRECT_INCONCLUSIVE_EVIDENCE semantics.
+- Negative-result integrity.
+- Condition-dependent heterogeneity safeguards.
+- No vote counting, quality scoring, numerical weighting, or pooling.
+- Stable scholarly identifier fallback.
+- Mandatory six-section output contract.
+
 ## v0.8.6
 
 ### Fixed

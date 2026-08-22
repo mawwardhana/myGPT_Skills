@@ -125,13 +125,72 @@ retrieval check before the final search diagnosis and stopping decision.
 | Field | Report |
 |---|---|
 | Counter-evidence pass performed | |
-| Search iteration used | |
-| Query or search logic | |
-| Source actually searched | |
+| Strategy A — target-preserving pass | |
+| Strategy A query / search logic | |
+| Strategy A source actually searched | |
 | Positive-effect terminology removed | |
 | Negative/null terminology tested | |
+| Strategy B — target-relaxed title-mismatch pass | |
+| Strategy B query / search logic | |
+| Strategy B source actually searched | |
+| Target organism / population term relaxed | |
 | Title-mismatch candidates screened | |
-| Material change from the pass | |
+| Retrieval-channel diversity used | |
+| Candidate ledger maintained | |
+| Candidate ledger resolution status | |
+| Material change from the passes | |
+
+For claim-focused searches with plausible title-mismatch risk, both
+counter-evidence discovery strategies must be auditable:
+
+**Strategy A — target-preserving, effect-neutral retrieval**
+
+Retain the target organism/population and intervention/material, but
+remove any requirement for positive-effect terminology.
+
+**Strategy B — target-relaxed title-mismatch retrieval**
+
+Retain the intervention/material but relax the target organism or
+population term in at least one query so that studies whose title or
+primary emphasis does not foreground the target can be discovered.
+
+Do not describe Strategy B as completed merely because a broader synonym
+for the target was used.
+
+The target itself must be relaxed from at least one meaningful discovery
+query when title-mismatch risk is relevant.
+
+### Counter-evidence candidate ledger
+
+Report each plausible counter-evidence or title-mismatch candidate that
+was retained during refinement until resolution.
+
+| Candidate | Why retained | Discovery strategy | Verification status | Final resolution |
+|---|---|---|---|---|
+| | | | | |
+
+A candidate must not disappear between search iterations without an
+explicit resolution.
+
+Allowed resolution descriptions include:
+
+- retained as evidence;
+- `EXCLUDED` with reason;
+- `UNVERIFIED`;
+- duplicate / overlapping record;
+- outside claim scope after screening.
+
+The candidate ledger is not an evidence-state table and does not create
+new controlled evidence labels.
+
+For claim-focused searches, final `ADEQUATE` diagnosis and stopping
+decisions should only appear after:
+
+1. Strategy A has been completed;
+2. Strategy B has been completed when applicable;
+3. candidate-ledger records have been resolved or explicitly retained as
+   unresolved;
+4. the material effect of the counter-evidence passes has been reported.
 
 When `Synthesis mode` is `CLAIM_SUPPORT`, at least one search iteration
 must be identifiable as the counter-evidence retrieval pass.

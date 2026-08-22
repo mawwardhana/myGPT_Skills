@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8.6
+Version: 0.8.7
 
 ## Purpose
 
@@ -742,6 +742,78 @@ counter-evidence retrieval check has been completed.
 
 The purpose of this check is retrieval balance, not forced symmetry:
 supporting and contrary evidence do not need to occur in equal numbers.
+
+#### Independent counter-evidence discovery requirement
+
+A counter-evidence check is not complete when all retrieval attempts are
+minor variants of the supporting search that preserve the same target
+terms and retrieval pathway.
+
+For claim-focused searches with plausible title-mismatch risk, use at
+least two complementary counter-evidence discovery strategies.
+
+Strategy 1 — target-preserving, effect-neutral retrieval:
+
+- retain the intervention, material, exposure, or phenomenon;
+- retain the target organism, population, or outcome context;
+- remove any requirement for a positive-effect term.
+
+Strategy 2 — target-relaxed title-mismatch retrieval:
+
+- retain the intervention, material, exposure, or phenomenon;
+- remove the target organism or population term from at least one query;
+- use broad domain, experimental, antimicrobial, null-result, or other
+  context terms as appropriate;
+- screen candidate abstracts, keywords, methods, results, tables, or
+  full text for the target organism, population, or outcome.
+
+The second strategy is required because a study may contain directly
+relevant target evidence even when the target is absent from its title
+or from the principal emphasis of the record.
+
+For example, a study whose title emphasizes Gram-negative bacteria may
+still contain direct experimental results for Staphylococcus aureus.
+
+When feasible, counter-evidence discovery should also use more than one
+retrieval channel, such as:
+
+- a bibliographic index; and
+- publisher, journal, repository, or scholarly full-text discovery.
+
+Do not treat repeated searches through the same retrieval pathway as
+independent counter-evidence discovery merely because individual query
+terms differ.
+
+If only one meaningful retrieval channel is available, report the
+source limitation explicitly.
+
+Any plausible contrary, null, inconclusive, or title-mismatch candidate
+identified during any search iteration must remain in the candidate
+ledger until it is screened or explicitly resolved.
+
+Do not silently drop such a candidate when later queries return a
+different evidence set.
+
+A claim-focused search must not receive final `ADEQUATE` status merely
+because:
+
+- supporting evidence is abundant;
+- negative terminology was technically tested;
+- a counter-evidence iteration was recorded; or
+- condition-dependent limitations were found.
+
+The counter-evidence check must make a genuine attempt to discover
+directly contrary or inconclusive evidence through a retrieval pathway
+that is meaningfully different from the supporting search.
+
+If no directly contrary evidence is found after the complementary
+passes, report only that none was identified in the performed retrieval.
+
+Do not infer that no contrary evidence exists.
+
+Final `ADEQUATE` diagnosis and stopping decisions require completion of
+both the target-preserving and target-relaxed counter-evidence discovery
+strategies, unless a documented source limitation prevents one of them.
 
 #### Controlled-label integrity
 
