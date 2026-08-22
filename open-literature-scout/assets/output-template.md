@@ -117,6 +117,50 @@ For example:
 
 is preferable to reproducing a tracked PubMed URL.
 
+### Counter-evidence retrieval
+
+For claim-focused searches, report the deliberate counter-evidence
+retrieval check before the final search diagnosis and stopping decision.
+
+| Field | Report |
+|---|---|
+| Counter-evidence pass performed | |
+| Search iteration used | |
+| Query or search logic | |
+| Source actually searched | |
+| Positive-effect terminology removed | |
+| Negative/null terminology tested | |
+| Title-mismatch candidates screened | |
+| Material change from the pass | |
+
+When `Synthesis mode` is `CLAIM_SUPPORT`, at least one search iteration
+must be identifiable as the counter-evidence retrieval pass.
+
+Do not report the search as finally `ADEQUATE` merely because supporting
+studies were retrieved.
+
+If the counter-evidence pass identifies directly relevant contrary,
+inconclusive, or claim-limiting evidence, retain it for normal screening,
+extraction, appraisal when applicable, comparability assessment, and
+study-contribution classification.
+
+If no directly relevant contrary evidence is identified, report only:
+
+`No directly relevant contrary evidence was identified in the performed counter-evidence retrieval.`
+
+Do not state or imply that contrary evidence does not exist.
+
+For claim-focused searches, do not finalize the following stopping
+reasons before the counter-evidence retrieval check is complete:
+
+- `ADEQUATE_RETRIEVAL`
+- `NO_MATERIAL_IMPROVEMENT`
+- `USER_SCOPE_REACHED`
+
+If source access prevents a meaningful counter-evidence check, report the
+limitation explicitly and use the controlled stopping logic appropriate
+to source limitation.
+
 ## 3. Screening criteria
 
 ### Include

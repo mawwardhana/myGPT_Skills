@@ -1,5 +1,45 @@
 # Open Literature Scout — Changelog
 
+## v0.8.6
+
+### Fixed
+- Added a mandatory counter-evidence retrieval check for claim-focused
+  searches before final adequacy or stopping decisions.
+- Prevented supporting-study retrieval alone from being treated as
+  sufficient evidence of balanced claim-level retrieval.
+- Required at least one deliberate retrieval pass aimed at finding
+  contrary, null, inconclusive, or claim-limiting evidence.
+- Added retrieval strategies that remove positive-effect terminology
+  and test negative or null-result terminology where appropriate.
+- Added title-mismatch screening so directly relevant evidence is not
+  missed merely because the title emphasizes another organism,
+  population, comparator, outcome, or intervention arm.
+- Required useful seed records from earlier iterations to be re-screened
+  when they may reveal contrary or claim-limiting evidence.
+- Prevented final `ADEQUATE` diagnosis and claim-focused stopping reasons
+  from being applied before the counter-evidence check is complete.
+- Added auditable counter-evidence retrieval reporting to the output
+  template.
+- Clarified that failure to retrieve contrary evidence does not establish
+  that contrary evidence does not exist.
+
+### Preserved
+- Exact controlled evidence-status and full-text-access labels.
+- Native-chitosan versus derivative/formulation screening integrity.
+- Detailed extraction and extraction-basis rules.
+- Cross-location quantitative consistency.
+- Context-linked quantitative-result records.
+- Per-study STRUCTURED_SCOUT_APPRAISAL with nine domains.
+- Relational comparability rendering.
+- Study-overlap safeguards.
+- DIRECT_SUPPORT finding-integrity requirements.
+- DIRECT_INCONCLUSIVE_EVIDENCE semantics.
+- Negative-result integrity.
+- Condition-dependent heterogeneity safeguards.
+- No vote counting, quality scoring, numerical weighting, or pooling.
+- Stable scholarly identifier fallback.
+- Mandatory six-section output contract.
+
 ## v0.8.5
 
 ### Fixed

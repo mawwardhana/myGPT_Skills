@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8.5
+Version: 0.8.6
 
 ## Purpose
 
@@ -694,6 +694,54 @@ references/chitosan-screening.md
 
 Before rendering the final answer, perform a final integrity check across
 retrieval, extraction, appraisal, and synthesis.
+
+#### Counter-evidence retrieval preflight
+
+Before declaring a claim-focused search ADEQUATE or applying a stopping
+reason, perform a deliberate counter-evidence retrieval check.
+
+A search that retrieves supporting studies is not sufficient by itself
+to establish adequate claim-level retrieval.
+
+For CLAIM_SUPPORT work, conduct at least one additional retrieval pass
+designed to detect evidence that may oppose, fail to support, or
+materially limit the claim.
+
+Use complementary strategies when appropriate, including:
+
+- a broad material/population query without requiring positive-effect
+  terminology;
+- negative or null-result terminology such as:
+  `no inhibition`, `no effect`, `not effective`, `ineffective`,
+  `resistant`, `no antibacterial activity`, or equivalent terms;
+- title-mismatch retrieval where the title may emphasize another
+  organism, outcome, or comparison even though the target evidence is
+  reported in the abstract, keywords, tables, or full text;
+- targeted follow-up of relevant records discovered during earlier
+  search iterations.
+
+Do not assume that a study is irrelevant merely because its title does
+not foreground the target organism or because the target finding is
+negative.
+
+For example, an article whose title emphasizes Gram-negative bacteria
+may still contain direct native-chitosan evidence for
+Staphylococcus aureus and must be screened if the organism appears in
+the record or study content.
+
+If directly relevant contrary or inconclusive evidence is found, retain
+and classify it using the existing controlled study-contribution labels.
+
+If no contrary evidence is found, report that no such evidence was
+identified in the performed retrieval; do not convert failure to retrieve
+contrary evidence into proof that contrary evidence does not exist.
+
+Do not use `ADEQUATE`, `ADEQUATE_RETRIEVAL`, `NO_MATERIAL_IMPROVEMENT`,
+or `USER_SCOPE_REACHED` to stop a claim-focused search until this
+counter-evidence retrieval check has been completed.
+
+The purpose of this check is retrieval balance, not forced symmetry:
+supporting and contrary evidence do not need to occur in equal numbers.
 
 #### Controlled-label integrity
 

@@ -287,3 +287,159 @@ It does not determine:
 
 Those decisions must continue to follow `SKILL.md` and any relevant
 domain-specific reference rules.
+
+## Counter-evidence retrieval check
+
+For claim-focused searches, iterative refinement must include a deliberate
+attempt to retrieve evidence that may oppose, fail to support, or
+materially limit the claim.
+
+Retrieval adequacy must not be judged only from the successful discovery
+of supporting studies.
+
+### When this check is required
+
+Perform the counter-evidence retrieval check when:
+
+- `Synthesis mode` is `CLAIM_SUPPORT`; or
+- the user asks whether evidence supports, contradicts, weakens, limits,
+  or qualifies a specific claim.
+
+The check must occur before the final search is classified as adequate
+and before a stopping reason is applied.
+
+### Minimum counter-evidence pass
+
+Conduct at least one retrieval iteration whose purpose is specifically
+to detect contrary, null, inconclusive, or claim-limiting evidence.
+
+The pass should use one or more of the following strategies as
+appropriate.
+
+#### 1. Remove positive-effect terminology
+
+Run a broader query that retains the intervention/material and target
+population, organism, or phenomenon but does not require terms such as:
+
+- antibacterial;
+- effective;
+- inhibition;
+- improved;
+- beneficial;
+- positive response.
+
+This reduces the risk that retrieval logic itself filters out studies
+whose findings are null or contrary.
+
+#### 2. Add negative or null-result terminology
+
+Where useful, test terms such as:
+
+- `"no inhibition"`
+- `"no effect"`
+- `"not effective"`
+- ineffective
+- resistant
+- `"no antibacterial activity"`
+- `"failed to inhibit"`
+- `"lack of activity"`
+
+These terms are retrieval aids, not evidence labels.
+
+Do not assume that all contrary studies will use explicit negative-result
+terminology.
+
+#### 3. Check title-mismatch risk
+
+A relevant study must not be excluded only because the title emphasizes:
+
+- another organism;
+- another population;
+- another outcome;
+- another comparator;
+- another intervention arm;
+- a broader or narrower experimental purpose.
+
+The target evidence may appear only in the abstract, methods, results,
+tables, figures, supplementary material, or a separately reported study
+arm.
+
+When a candidate record is otherwise relevant, screen beyond the title
+when accessible evidence permits.
+
+For example, a paper whose title emphasizes Gram-negative bacteria may
+still report direct experimental results for `Staphylococcus aureus`.
+
+#### 4. Re-screen useful seed records
+
+Relevant records discovered during earlier iterations may reveal:
+
+- additional organisms;
+- comparison arms;
+- cited primary studies;
+- terminology not represented in the initial query;
+- null or contrary findings embedded in a broader study.
+
+Use those observations for targeted refinement when they could
+materially affect claim-level retrieval.
+
+### Interpretation of the check
+
+Finding contrary evidence does not automatically mean the overall
+evidence is `MIXED_EVIDENCE`.
+
+The retrieved study must still proceed through:
+
+screening
+→ extraction
+→ appraisal when applicable
+→ comparability assessment
+→ study-contribution classification
+→ synthesis.
+
+Likewise, failure to retrieve contrary evidence does not establish that
+no contrary evidence exists.
+
+Report only that no directly relevant contrary evidence was identified
+in the counter-evidence retrieval performed.
+
+### Relationship to search diagnosis
+
+For a claim-focused search, do not assign final:
+
+`ADEQUATE`
+
+until the counter-evidence retrieval check has been completed.
+
+If supporting evidence has been retrieved but the counter-evidence check
+has not yet been performed, the search remains incomplete for
+claim-support synthesis.
+
+### Relationship to stopping rules
+
+Do not apply:
+
+- `ADEQUATE_RETRIEVAL`
+- `NO_MATERIAL_IMPROVEMENT`
+- `USER_SCOPE_REACHED`
+
+as the final stopping reason for a claim-focused search before the
+counter-evidence retrieval check.
+
+`SOURCE_LIMITATION_REACHED` may still apply when source access prevents
+a meaningful counter-evidence check, but the limitation must be stated
+explicitly.
+
+### Reporting requirement
+
+In the search-iteration record, identify which iteration served as the
+counter-evidence retrieval pass and report:
+
+- query or search logic used;
+- source actually searched;
+- whether positive-effect terminology was removed;
+- whether negative/null terminology was tested;
+- whether title-mismatch candidates were screened;
+- what material change, if any, resulted from the pass.
+
+Do not invent retrieval counts when exact counts are unavailable.
