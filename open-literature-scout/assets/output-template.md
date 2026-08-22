@@ -165,9 +165,9 @@ query when title-mismatch risk is relevant.
 Report each plausible counter-evidence or title-mismatch candidate that
 was retained during refinement until resolution.
 
-| Candidate | Why retained | Discovery strategy | Verification status | Final resolution | Downstream evidence record |
-|---|---|---|---|---|---|
-| | | | | | |
+| Candidate | Why retained | Discovery strategy | Verification status | Study-level resolution | Arm-level resolution | Downstream evidence record |
+|---|---|---|---|---|---|---|
+| | | | | | | |
 
 Candidate-handoff integrity check:
 
@@ -184,9 +184,10 @@ downstream evidence set.
 Do not allow a candidate to disappear after retrieval without an explicit
 resolution.
 
-If a candidate's final screening decision changes, update both:
+If a candidate's final screening decision changes, update:
 
-- `Final resolution`; and
+- `Study-level resolution`;
+- `Arm-level resolution` when applicable; and
 - `Downstream evidence record`.
 
 Before finalizing the report, cross-check:
@@ -250,6 +251,43 @@ If source access prevents a meaningful counter-evidence check, report the
 limitation explicitly and use the controlled stopping logic appropriate
 to source limitation.
 
+### Study-level and arm-level resolution check
+
+For mixed-comparison studies, report separately:
+
+**Study-level resolution**
+
+This records whether the scholarly article as a whole is retained in the
+evidence set.
+
+**Arm-level resolution**
+
+This records the disposition of materially distinct experimental arms.
+
+Example:
+
+| Level | Resolution |
+|---|---|
+| Study-level resolution | `retained as evidence` |
+| Native chitosan arm | retained |
+| Schiff-base derivative arm | `EXCLUDED` — derivative arm not eligible for native-chitosan claim |
+
+An excluded derivative, formulation, composite, nanoparticle,
+chitooligosaccharide, or other ineligible arm does not automatically
+exclude the whole scholarly study when a separately extractable eligible
+native arm remains.
+
+Conversely, a study must not remain retained merely because native
+chitosan is mentioned if the eligible native arm cannot be separated
+from the ineligible material or active components.
+
+When the study-level resolution is:
+
+`retained as evidence`
+
+the eligible study must remain traceable into selected literature and
+all downstream stages that are performed.
+
 ## 3. Screening criteria
 
 ### Include
@@ -284,6 +322,52 @@ Use only the Full-text access labels defined in `SKILL.md`.
 When a relevant domain-specific reference file requires an additional
 classification field, add that field to this table without removing
 the mandatory columns above.
+
+### Retained-set reconciliation
+
+Before finalizing selected literature, reconcile all candidate-ledger
+records against the downstream evidence set.
+
+Report:
+
+**Retained candidates from ledger:**  
+**Retained candidates represented in selected literature:**  
+**Unexplained retained-candidate omissions:**  
+
+For mixed-comparison studies, also report which eligible arm supplies the
+claim-relevant evidence.
+
+The reconciliation must satisfy:
+
+`retained as evidence`
+→ one deduplicated selected scholarly study
+→ one unique evidence unit.
+
+A study marked `retained as evidence` must not be absent from selected
+literature.
+
+A screening note must not state that a study "remains selected" when the
+study is absent from selected literature.
+
+If further screening changes the disposition of a candidate, revise the
+candidate ledger before finalizing the report.
+
+Report:
+
+`Retained-set reconciliation: PASS`
+
+only when:
+
+- every study-level `retained as evidence` candidate maps to exactly one
+  selected evidence unit;
+- duplicate or overlapping candidates map to an existing selected
+  evidence unit rather than creating another one;
+- excluded, outside-scope, or unverified candidates have an explicit
+  downstream resolution;
+- mixed-comparison studies distinguish study-level from arm-level
+  resolution;
+- no contradictory resolution remains across ledger, screening notes,
+  selected literature, extraction, appraisal, or synthesis.
 
 ### Unique evidence-unit check
 
@@ -326,9 +410,12 @@ Report:
 only when:
 
 - no duplicate scholarly study remains as multiple selected-literature
-  rows; and
-- every candidate marked `retained as evidence` is traceable to a
-  downstream evidence record.
+  rows;
+- every study-level candidate resolved as `retained as evidence` is
+  represented by exactly one selected evidence unit;
+- every retained candidate is traceable to its downstream evidence
+  record; and
+- `Retained-set reconciliation: PASS` has been satisfied.
 
 ### Evidence extraction mode
 
@@ -447,6 +534,11 @@ If no records exist in a category, state:
 
 Evidence-unit counts must be based on deduplicated scholarly studies,
 not the number of discovery, verification, or access records.
+
+**Retained candidates from ledger:**  
+**Retained candidates represented downstream:**  
+**Unexplained retained-candidate omissions:**  
+**Retained-set reconciliation:** 
 
 Confirmed studies:  
 Probable studies:  

@@ -1,5 +1,58 @@
 # Open Literature Scout — Changelog
 
+## v0.8.9
+
+### Fixed
+- Added retained-set reconciliation before final report completion.
+- Required every study-level candidate resolved as `retained as evidence`
+  to map to exactly one downstream selected evidence unit.
+- Prevented candidates from being retained in the ledger while silently
+  disappearing from selected literature, extraction, appraisal, or
+  synthesis.
+- Added cross-layer resolution consistency across candidate ledger,
+  screening notes, selected literature, extraction, appraisal,
+  claim-support mapping, and search-quality counts.
+- Added explicit distinction between study-level resolution and
+  arm-level resolution for mixed-comparison studies.
+- Prevented exclusion of an ineligible derivative, formulation,
+  composite, nanoparticle, or other arm from silently excluding an
+  otherwise eligible study-level native arm.
+- Prevented a mixed-comparison study from remaining retained when its
+  eligible native arm cannot be separated from ineligible material or
+  active components.
+- Required candidate-ledger resolution revisions to replace earlier
+  retained decisions when further screening changes study eligibility.
+- Required `Retained-set reconciliation: PASS` before
+  `Unique evidence-unit check: PASS` can be reported.
+- Required unique selected evidence-unit counts to be calculated only
+  after retained-set reconciliation and deduplication are complete.
+- Added retained-candidate counts, downstream representation counts,
+  unexplained omission counts, and reconciliation status to Search
+  quality.
+
+### Preserved
+- Independent counter-evidence discovery using complementary Strategy A
+  and Strategy B.
+- Retrieval-channel diversity.
+- Counter-evidence candidate ledger.
+- Candidate handoff and unique evidence-unit deduplication.
+- Exact controlled evidence-status, DOI-verification, and full-text
+  access labels.
+- Native-chitosan versus derivative/formulation screening integrity.
+- Detailed extraction and extraction-basis rules.
+- Cross-location quantitative consistency.
+- Context-linked quantitative-result records.
+- Per-study STRUCTURED_SCOUT_APPRAISAL with nine domains.
+- Relational comparability rendering.
+- Study-overlap safeguards.
+- DIRECT_SUPPORT finding-integrity requirements.
+- DIRECT_INCONCLUSIVE_EVIDENCE semantics.
+- Negative-result integrity.
+- Condition-dependent heterogeneity safeguards.
+- No vote counting, quality scoring, numerical weighting, or pooling.
+- Stable scholarly identifier fallback.
+- Mandatory six-section output contract.
+
 ## v0.8.8
 
 ### Fixed

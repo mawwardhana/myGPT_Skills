@@ -544,6 +544,125 @@ candidate ledger
 → extraction when performed
 → synthesis when performed.
 
+### Study-level and arm-level resolution
+
+For mixed-comparison studies, distinguish the resolution of the scholarly
+study from the resolution of individual experimental arms.
+
+Use:
+
+`Study-level resolution`
+
+for the disposition of the article as a whole.
+
+Use:
+
+`Arm-level resolution`
+
+for separately screened native, derivative, formulation, composite,
+nanoparticle, chitooligosaccharide, or other materially distinct arms.
+
+A study may remain:
+
+`retained as evidence`
+
+at study level when it contains at least one separately extractable
+eligible native-chitosan arm, even when other arms are excluded.
+
+For example:
+
+Study-level resolution:
+`retained as evidence`
+
+Arm-level resolution:
+- native chitosan arm → retained;
+- Schiff-base derivative arm → `EXCLUDED` for the native-chitosan claim.
+
+Do not convert exclusion of an ineligible arm into exclusion of the
+entire scholarly study when an eligible arm remains separately
+extractable.
+
+Conversely, do not retain the whole study merely because native chitosan
+is mentioned if the native arm cannot be separated from the derivative,
+formulation, composite, or other active components.
+
+When a mixed-comparison study is retained at study level, its eligible
+arm must remain traceable into:
+
+selected literature
+→ extraction
+→ appraisal when performed
+→ synthesis when performed.
+
+Excluded arms may remain documented in screening notes but must not be
+used as evidence for the native-material claim.
+
+### Retained-set reconciliation
+
+Before final search reporting, construct a retained-candidate set from
+all candidate-ledger records whose final study-level resolution is:
+
+`retained as evidence`
+
+Compare that retained set against the deduplicated selected-literature
+set.
+
+Each retained scholarly study must map to exactly one selected evidence
+unit.
+
+The reconciliation must satisfy:
+
+retained candidate
+→ one selected scholarly study
+→ one evidence unit.
+
+If a retained candidate is absent downstream, do not finalize the report
+until one of the following occurs:
+
+1. the study is added to the selected evidence set; or
+2. its candidate-ledger resolution is explicitly revised.
+
+When the resolution changes after further screening, update the ledger
+rather than preserving the earlier retained state.
+
+Examples of explicit revised resolutions include:
+
+- `EXCLUDED` with reason;
+- `UNVERIFIED`;
+- duplicate or overlapping record;
+- outside claim scope after screening.
+
+Do not allow the following unresolved contradiction:
+
+candidate ledger:
+`retained as evidence`
+
+selected literature:
+study absent
+
+Likewise, do not allow:
+
+screening notes:
+study remains selected
+
+selected literature:
+study absent
+
+For mixed-comparison studies, perform reconciliation at both levels:
+
+study-level:
+is the article retained or not?
+
+arm-level:
+which experimental arm supplies the eligible evidence?
+
+A retained study with only an eligible native arm must still appear once
+as a unique selected evidence unit.
+
+The derivative/formulation arms must not create additional evidence
+units unless the workflow is explicitly analyzing those arms as separate
+claim-relevant evidence.
+
 ### Unique evidence-unit deduplication
 
 Before finalizing selected literature, deduplicate scholarly records into
@@ -606,6 +725,23 @@ counter-evidence search was complete.
 Likewise, technically testing negative terminology alone does not satisfy
 this requirement if the discovery pathway remains effectively identical
 to the supporting search.
+
+Final counter-evidence completion also requires retained-set
+reconciliation.
+
+Do not treat the counter-evidence workflow as complete merely because
+all candidates have text in the `Final resolution` field.
+
+Completion requires that:
+
+- every study-level `retained as evidence` candidate is present in the
+  selected evidence set;
+- duplicate candidates map to an existing unique evidence unit;
+- excluded or unresolved candidates have explicit downstream records;
+- mixed-comparison studies distinguish study-level and arm-level
+  resolution;
+- retained-set and selected-literature-set reconciliation has no
+  unexplained mismatch.
 
 ### Interpretation of the check
 

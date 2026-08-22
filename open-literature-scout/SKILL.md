@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8.8
+Version: 0.8.9
 
 ## Purpose
 
@@ -900,6 +900,114 @@ there is a defensible reason to treat them as separate evidence units.
 
 Evidence-unit counts in Search quality must be based on unique evidence
 units after this deduplication check.
+
+#### Retained-set reconciliation preflight
+
+Before finalizing the report, reconcile the candidate ledger against all
+downstream evidence records.
+
+Construct the retained-candidate set from every candidate whose final
+resolution is:
+
+`retained as evidence`
+
+Then verify that every member of that retained set appears in the
+downstream selected evidence set.
+
+For each retained candidate, verify traceability across all downstream
+stages that are performed:
+
+candidate ledger
+→ screening decision
+→ selected literature
+→ extraction
+→ appraisal when performed
+→ synthesis when performed.
+
+A candidate must not be described as `retained as evidence` while being
+absent from selected literature.
+
+Likewise, do not state that a study "remains selected" in screening notes
+if it is absent from the selected evidence set.
+
+If further screening changes the decision, revise the candidate ledger
+before finalizing the report.
+
+For example:
+
+`retained as evidence`
+
+may be revised to:
+
+- `EXCLUDED` with reason;
+- `UNVERIFIED`;
+- duplicate or overlapping record;
+- outside claim scope after screening.
+
+The revised resolution must be visible and must replace the earlier
+retained resolution.
+
+Do not leave contradictory resolutions in different report sections.
+
+Before reporting:
+
+`Unique evidence-unit check: PASS`
+
+verify both conditions:
+
+1. no scholarly study is duplicated as more than one selected evidence
+   unit; and
+2. every candidate resolved as `retained as evidence` is represented by
+   exactly one downstream selected evidence unit.
+
+If either condition fails, do not report:
+
+`Unique evidence-unit check: PASS`
+
+The unique selected evidence-unit count must be calculated only after
+this reconciliation is complete.
+
+The final count must equal the number of deduplicated selected evidence
+units after all retained-candidate handoffs and resolution revisions have
+been completed.
+
+#### Cross-layer resolution consistency
+
+Before final output, compare candidate-resolution statements across:
+
+- counter-evidence candidate ledger;
+- screening notes;
+- selected literature;
+- extraction;
+- appraisal;
+- claim-support map;
+- search-quality counts.
+
+The same scholarly study must not simultaneously be represented as:
+
+- retained in one section and omitted without explanation in another;
+- retained in one section and excluded in another without an explicit
+  arm-level or study-level distinction;
+- selected in screening notes but absent from selected literature;
+- counted as a unique evidence unit without a selected-literature record.
+
+When a mixed-comparison study contains both eligible native evidence and
+excluded derivative or formulation arms, distinguish explicitly between:
+
+`study-level resolution`
+
+and:
+
+`arm-level resolution`
+
+Excluding a derivative arm does not exclude the whole study when a
+separately extractable native arm remains retained.
+
+Conversely, retaining a native arm means the study must remain traceable
+as a selected evidence unit.
+
+Do not finalize the report until these cross-layer representations are
+internally consistent.
 
 #### Controlled-label integrity
 
