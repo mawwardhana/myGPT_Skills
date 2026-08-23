@@ -1,5 +1,67 @@
 # Open Literature Scout — Changelog
 
+## v0.8.11
+
+### Fixed
+- Added row-level aggregate derivation so Search-quality counts must be
+  calculated from explicit reconciled study-level records rather than
+  reconstructed from narrative text, search hits, or memory.
+- Added a mandatory row-level reconciliation table covering study
+  identity, Selected-literature membership, final evidence state,
+  study-level resolution, DOI verification, Full-text access,
+  study-level domain classification, retained-candidate status, and
+  downstream representation.
+- Required `Confirmed open/full-text articles` to equal the number of
+  selected study-level rows whose Full-text access is exactly
+  `Open access` or `Free full text`.
+- Required `Excluded records` to be counted only from records whose final
+  study-level Evidence status is exactly `EXCLUDED`.
+- Prevented descriptions such as `outside claim scope`, `outside core
+  evidence set`, or arm-level exclusion from being counted as
+  study-level EXCLUDED unless the final Evidence status is explicitly
+  normalized to `EXCLUDED`.
+- Strengthened domain-specific reconciliation so aggregate
+  classifications must be derived from explicit study-level
+  classifications.
+- Expanded the chitosan `Mixed comparison` rule beyond derivatives to
+  include formulations/composites, nanoparticles, films, gels,
+  chitooligosaccharides, hydrolyzed/oligomeric chitosan, grafted or
+  conjugated chitosan, and other materially distinct chitosan forms.
+- Required a study containing an eligible native-chitosan arm plus
+  materially distinct chitosan arms to remain classified at study level
+  as `Mixed comparison` when required by the domain taxonomy.
+- Clarified that study-level `Mixed comparison` classification may
+  coexist with a retained native-chitosan arm.
+- Prevented a mixed-comparison scholarly study from being relabeled as
+  `Native chitosan` merely because only its native arm contributes to
+  extraction or synthesis.
+- Strengthened `Aggregate report reconciliation: PASS` so it requires a
+  complete row-level reconciliation table and exact agreement between
+  row-derived counts and reported Search-quality aggregates.
+
+### Preserved
+- Strategy A target-preserving counter-evidence retrieval.
+- Strategy B target-relaxed title-mismatch retrieval.
+- Strategy C citation-neighborhood counter-evidence expansion.
+- Counter-evidence candidate ledger.
+- Candidate-handoff integrity.
+- Retained-set reconciliation.
+- Unique evidence-unit deduplication.
+- Study-level versus arm-level resolution.
+- Per-study STRUCTURED_SCOUT_APPRAISAL completion.
+- Nine-domain Scout appraisal taxonomy.
+- Controlled evidence-status, DOI-verification, and Full-text access
+  vocabularies.
+- Extraction-basis integrity.
+- Cross-location quantitative consistency.
+- Claim-contribution integrity.
+- DIRECT_INCONCLUSIVE_EVIDENCE semantics.
+- Negative-result safeguards.
+- Comparability and overlap safeguards.
+- No vote counting, numerical quality weighting, pooling, or formal
+  certainty grading.
+- Mandatory six-section output contract.
+
 ## v0.8.10
 
 ### Fixed

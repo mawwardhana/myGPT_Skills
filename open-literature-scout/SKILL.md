@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8.10
+Version: 0.8.11
 
 ## Purpose
 
@@ -1438,6 +1438,132 @@ Calculate aggregate counts only after:
 5. Selected literature is final.
 
 Use the following counting rules.
+
+#### Row-level aggregate derivation
+
+Aggregate reconciliation must be derived from explicit study-level rows
+rather than reconstructed from memory after the report has been written.
+
+Before rendering Search-quality aggregate counts, construct a row-level
+reconciliation record for every unique scholarly study that contributes
+to any reported aggregate.
+
+At minimum preserve, for each study:
+
+- study identity;
+- selected-literature membership;
+- final evidence state;
+- final study-level resolution;
+- DOI-verification label;
+- Full-text access label;
+- study-level domain classification;
+- whether the study is a retained candidate;
+- whether it is represented downstream.
+
+Use the row-level records as the sole basis for aggregate counts.
+
+Do not calculate one aggregate from Selected literature and another from
+Screening notes without first reconciling the underlying study identity.
+
+For each aggregate field, count the qualifying rows directly.
+
+For example:
+
+`Confirmed open/full-text articles`
+
+must equal the number of selected study-level rows whose Full-text access
+is exactly:
+
+- `Open access`; or
+- `Free full text`.
+
+If four selected rows carry those labels, the aggregate must be 4.
+
+Do not report another value based on narrative access information,
+extraction basis, memory, or source inspection performed elsewhere.
+
+Likewise:
+
+`Excluded records`
+
+must be derived from explicit final study-level evidence states.
+
+A record whose study-level evidence state is not explicitly:
+
+`EXCLUDED`
+
+must not be counted as an EXCLUDED study merely because it is outside the
+claim scope.
+
+If an outside-scope record is intended to count as excluded, normalize
+its final study-level evidence state to:
+
+`EXCLUDED`
+
+and preserve the specific exclusion reason separately.
+
+Arm-level exclusions must never create additional study-level EXCLUDED
+rows when the scholarly study remains retained.
+
+#### Study-level domain-classification derivation
+
+Domain-specific aggregate counts must be derived from an explicit
+study-level classification for each scholarly study.
+
+Do not infer study-level classification only from the eligible arm used
+in synthesis.
+
+When one scholarly study contains materially distinct experimental arms,
+classify the study according to the domain taxonomy at study level.
+
+For chitosan-related work, a study that contains an eligible native
+chitosan arm together with one or more materially distinct:
+
+- derivative;
+- formulation/composite;
+- nanoparticle;
+- film;
+- chitooligosaccharide;
+- hydrolyzed/oligomeric material;
+- other materially distinct chitosan form
+
+must be classified at study level as:
+
+`Mixed comparison`
+
+when those arms are part of the same scholarly study.
+
+Its eligible native arm may still contribute native-chitosan evidence.
+
+This means:
+
+study-level classification:
+`Mixed comparison`
+
+may coexist with:
+
+arm-level resolution:
+native chitosan arm → retained.
+
+Do not convert the study-level classification to:
+
+`Native chitosan`
+
+merely because only the native arm is used in the claim-support
+synthesis.
+
+Before reporting domain-specific counts, reconcile:
+
+Selected literature study-level classification
+→ candidate-ledger study-level classification
+→ domain-specific summary count.
+
+The same scholarly study must contribute to exactly one study-level
+domain-classification count unless the domain taxonomy explicitly
+defines overlapping categories.
+
+Arm-level categories may be reported separately but must not change the
+number of scholarly studies.
 
 #### Unique selected evidence units
 

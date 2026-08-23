@@ -57,11 +57,67 @@ derivative.
 
 ### Mixed-comparison rule
 
-If a study tests native chitosan and a derivative in separate groups:
+Classify a scholarly study as:
 
-- the study may remain in the core evidence set;
-- identify it as "Mixed comparison";
-- report findings for native chitosan separately from the derivative.
+`Mixed comparison`
+
+at study level when the same article tests native or unmodified chitosan
+together with one or more materially distinct chitosan forms in separate
+experimental arms or comparison groups.
+
+Materially distinct forms may include:
+
+- chemically modified chitosan derivatives;
+- formulations or composites;
+- nanoparticles;
+- films, membranes, or gels;
+- chitooligosaccharides;
+- hydrolyzed or oligomeric chitosan;
+- conjugated or grafted chitosan;
+- other materially distinct chitosan preparations.
+
+The study may remain in the core native-chitosan evidence set when the
+native or unmodified chitosan arm is separately extractable.
+
+In that case:
+
+- classify the scholarly study at study level as `Mixed comparison`;
+- retain the eligible native-chitosan arm when relevant to the research
+  question;
+- report the native-chitosan finding separately from the ineligible or
+  materially distinct arm;
+- preserve the disposition of each materially distinct arm at arm level.
+
+Do not relabel the scholarly study as:
+
+`Native chitosan`
+
+merely because only the native-chitosan arm is used in extraction,
+appraisal, or synthesis.
+
+Study-level classification and arm-level eligibility are separate.
+
+For example:
+
+`Study-level classification: Mixed comparison`
+
+may coexist with:
+
+`Native chitosan arm: retained`
+
+and:
+
+`Derivative/formulation/oligomer arm: EXCLUDED from the native-chitosan claim`
+
+An excluded derivative, formulation, nanoparticle, film,
+chitooligosaccharide, hydrolyzed/oligomeric, or other materially distinct
+arm does not automatically exclude the whole scholarly study when a
+separately extractable eligible native-chitosan arm remains.
+
+Conversely, the presence or mention of native chitosan does not make the
+study eligible for the native-chitosan evidence set when the native arm
+cannot be separately identified or its outcome cannot be separately
+attributed.
 
 ### Formulation rule
 

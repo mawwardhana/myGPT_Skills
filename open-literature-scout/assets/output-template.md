@@ -679,6 +679,36 @@ Unresolved verification issues:
 Calculate Search-quality aggregates only from the final reconciled
 study-level records.
 
+#### Row-level reconciliation table
+
+Before calculating any aggregate count, construct one row for every
+unique scholarly study that contributes to Selected literature,
+Screening notes, candidate-ledger resolution, or a reported
+domain-specific count.
+
+| Study | Selected literature? | Final evidence state | Final study-level resolution | DOI verification | Full-text access | Study-level domain classification | Retained candidate? | Represented downstream? |
+|---|---|---|---|---|---|---|---|---|
+| | | | | | | | | |
+
+Use one row per unique scholarly study.
+
+Do not create additional rows for:
+
+- publisher records;
+- PubMed records;
+- PMC records;
+- repository copies;
+- Crossref records;
+- alternate full-text locations;
+- duplicate rediscovery records;
+- experimental arms within the same scholarly study.
+
+Experimental-arm dispositions belong in the study's screening or
+arm-level resolution record and do not create additional scholarly-study
+rows.
+
+All Search-quality aggregate counts must be derived from this table.
+
 Do not calculate these counts from:
 
 - search-result totals;
@@ -702,6 +732,15 @@ Screening notes:
 | Retained candidates from ledger | | Final study-level retained candidates |
 | Retained candidates represented downstream | | Reconciled selected evidence set |
 | Unexplained retained-candidate omissions | | Retained-set reconciliation |
+
+Derive each aggregate by counting qualifying rows in the row-level
+reconciliation table.
+
+Do not enter an aggregate value first and attempt to justify it
+afterwards.
+
+For each aggregate, the reported count must equal the number of
+qualifying study-level rows.
 
 Counting rules:
 
@@ -735,6 +774,27 @@ Count unique scholarly studies whose final study-level evidence state is:
 
 Do not count excluded experimental arms as separate excluded studies when
 the scholarly study remains retained because an eligible arm exists.
+
+A study contributes to `Excluded records` only when its final
+study-level Evidence status is exactly:
+
+`EXCLUDED`
+
+Descriptions such as:
+
+- outside claim scope;
+- outside core evidence set;
+- formulation not used for the claim;
+- arm excluded
+
+do not themselves create an EXCLUDED study-level count.
+
+If such a study is intended to count as excluded, normalize the final
+study-level Evidence status to:
+
+`EXCLUDED`
+
+and place the specific reason in a separate reason or resolution field.
 
 **Verified DOI**
 
@@ -789,6 +849,38 @@ Arm-level exclusions must not create additional scholarly-study counts.
 
 If no domain-specific classification is used, omit this subsection.
 
+Before reporting domain-specific counts, every selected or screened
+scholarly study used in those counts must have one explicit:
+
+`Study-level domain classification`
+
+in the row-level reconciliation table.
+
+For chitosan-related work, when the same article contains an eligible
+native-chitosan arm plus one or more materially distinct derivative,
+formulation/composite, nanoparticle, film, chitooligosaccharide,
+hydrolyzed/oligomeric, or other chitosan arms, classify the scholarly
+study at study level as:
+
+`Mixed comparison`
+
+when required by the domain taxonomy.
+
+The eligible native arm may still be:
+
+`retained`
+
+for the native-chitosan claim.
+
+Do not relabel the whole scholarly study:
+
+`Native chitosan`
+
+merely because only its native arm contributes to synthesis.
+
+The domain-specific summary must be obtained by counting the final
+study-level classification rows.
+
 Search iterations performed:  
 Final search diagnosis:  
 Search stopping reason:
@@ -812,6 +904,22 @@ Report:
 
 only when all reported aggregate counts match the final reconciled
 study-level records.
+
+Before reporting PASS, verify that:
+
+1. the row-level reconciliation table is complete;
+2. every aggregate was derived from qualifying rows in that table;
+3. `Confirmed open/full-text articles` equals the number of selected
+   rows labeled exactly `Open access` or `Free full text`;
+4. `Excluded records` equals the number of study-level rows whose final
+   Evidence status is exactly `EXCLUDED`;
+5. domain-specific counts equal the number of rows carrying each final
+   study-level domain classification;
+6. the sum and category assignments do not contradict Selected
+   literature, Screening notes, or candidate-ledger resolutions.
+
+If any row-level value and aggregate value disagree, reconciliation
+fails until the underlying record or count is corrected.
 
 At minimum verify consistency for:
 
