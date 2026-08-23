@@ -2,6 +2,70 @@
 
 All notable changes to Universal Research Skills will be documented in this file.
 
+## [0.4.0-alpha.1] - Evidence & Reference Integrity Foundation
+
+### Added
+
+- `scopus-literature-search` skill as the primary scholarly literature discovery layer.
+- `source-verification` skill for validating scholarly publication identity, metadata, DOI integrity, peer-review status, journal legitimacy, Scopus status, corrections, and retractions.
+- `reference-integrity-guard` skill for auditing the complete relationship between scientific claims, in-text citations, verified sources, and reference-list entries.
+- Scopus-first literature discovery with fallback support for OpenAlex, Crossref, PubMed, Semantic Scholar, publisher platforms, and discipline-specific scholarly sources.
+- Explicit separation between Scopus source-level status and document-level Scopus verification.
+- Historical Scopus coverage awareness to prevent incorrect indexing claims for articles published outside a journal's Scopus coverage period.
+- Search-query decomposition using concept blocks, synonyms, historical terminology, disciplinary terminology, and terminology drift.
+- Dedicated search modes for exploratory research, research landscapes, State of the Art, gap validation, novelty validation, continuation studies, methodology, target-journal context, systematic review, meta-analysis, and manuscript support.
+- Mandatory contradictory-evidence and competing-theory search principles to reduce confirmation bias.
+- DOI normalization, bibliographic normalization, duplicate detection, and provenance preservation.
+- Source-verification tiers covering publication identity, scholarly status, indexing status, and integrity checks.
+- Retraction, correction, preprint, conference-paper, and duplicate-publication handling.
+- Reference-mashup and citation-hallucination detection.
+- Claim-to-source support auditing.
+- Claim-strength auditing to prevent causal or universal claims that exceed the underlying evidence.
+- In-text citation and reference-list consistency checks.
+- Target-journal citation integrity safeguards.
+- Citation-padding detection.
+- Explicit prohibition of fabricated references, guessed DOI values, unsupported Scopus claims, and "vibe citation."
+
+### Architecture
+
+Evidence and Reference Integrity architecture — foundation:
+
+`scopus-literature-search`
+→ `source-verification`
+→ `reference-integrity-guard`
+
+Responsibilities are intentionally separated:
+
+- `scopus-literature-search` discovers potentially relevant scholarly records.
+- `source-verification` determines whether individual sources are real, traceable, bibliographically consistent, legitimate, and appropriately verified.
+- `reference-integrity-guard` determines whether verified sources are used accurately and appropriately to support scientific claims.
+
+### Scientific Integrity
+
+The Evidence Layer establishes the following non-negotiable principles:
+
+- discovered does not mean verified;
+- Scopus source status does not automatically prove Scopus document status;
+- DOI-like syntax does not prove DOI validity;
+- a real source can still be cited incorrectly;
+- a relevant title does not prove claim support;
+- target-journal citations must remain scientifically relevant;
+- APC status must not influence scientific evidence selection;
+- journal prestige does not substitute for evidence quality;
+- unverified references must not silently enter evidence-dependent scientific claims;
+- retracted literature must not support scientific conclusions;
+- references must never be assembled from mixed metadata belonging to different publications.
+
+### Status
+
+This is the first development checkpoint of the Evidence & Reference Integrity Layer.
+
+Remaining components planned for v0.4.0:
+
+- `citation-chaining`
+- `literature-screening`
+- `evidence-synthesis`
+
 ## [0.3.0] - Research Discovery Layer
 
 ### Added
