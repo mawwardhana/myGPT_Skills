@@ -1,5 +1,77 @@
 # Open Literature Scout — Changelog
 
+## v0.8.10
+
+### Fixed
+- Added Strategy C citation-neighborhood counter-evidence expansion for
+  claim-focused searches whose Strategy A and Strategy B retrieval
+  remains uniformly supportive or identifies no direct contrary
+  evidence.
+- Required Strategy C to use a materially different discovery pathway,
+  such as backward references, forward citations, related-article
+  discovery, or citation-network/reference-neighborhood discovery,
+  rather than another keyword-query variation.
+- Required citation-neighborhood candidates to enter the existing
+  counter-evidence candidate ledger and remain traceable until explicit
+  resolution.
+- Added an explicit Strategy C completion gate before final claim-focused
+  search adequacy when citation-neighborhood discovery is feasible.
+- Required source/tool limitations to be documented when Strategy C
+  cannot be performed.
+- Strengthened per-study STRUCTURED_SCOUT_APPRAISAL completeness so every
+  unique selected evidence unit requiring appraisal receives exactly one
+  explicit appraisal record.
+- Prevented collective statements about remaining abstract-only or
+  metadata-only studies from substituting for required per-study
+  appraisal records.
+- Required all nine Scout appraisal domains to be rendered for every
+  selected study when STRUCTURED_SCOUT_APPRAISAL is active, using
+  NOT_VERIFIED where the appraisal basis does not support a stronger
+  judgment.
+- Added appraisal-completion reconciliation between selected evidence
+  units and completed per-study appraisal records.
+- Added aggregate report reconciliation for Search quality.
+- Required Search-quality counts to be calculated from final,
+  deduplicated, reconciled study-level records rather than search hits,
+  discovery records, or intermediate candidate lists.
+- Added deterministic counting rules for CONFIRMED, PROBABLE,
+  UNVERIFIED, EXCLUDED, verified DOI, and confirmed open/full-text
+  articles.
+- Prevented excluded experimental arms in retained mixed-comparison
+  studies from inflating study-level EXCLUDED counts.
+- Required open/full-text counts to be derived only from the controlled
+  Full-text access field, not from FULL_TEXT extraction basis.
+- Added domain-classification reconciliation for mixed-comparison studies.
+- Added `Aggregate report reconciliation: PASS` as a final consistency
+  gate for Search-quality counts.
+
+### Preserved
+- Complementary Strategy A target-preserving counter-evidence retrieval.
+- Strategy B target-relaxed title-mismatch retrieval.
+- Retrieval-channel diversity.
+- Counter-evidence candidate ledger.
+- Study-level versus arm-level resolution.
+- Retained-set reconciliation.
+- Unique evidence-unit deduplication.
+- Candidate-to-downstream evidence handoff.
+- Exact controlled evidence-status, DOI-verification, and full-text
+  access labels.
+- Native-chitosan versus derivative/formulation screening integrity.
+- Detailed extraction and extraction-basis rules.
+- Cross-location quantitative consistency.
+- Context-linked quantitative-result records.
+- Per-study STRUCTURED_SCOUT_APPRAISAL nine-domain taxonomy.
+- Relational comparability rendering.
+- Study-overlap safeguards.
+- DIRECT_SUPPORT finding-integrity requirements.
+- DIRECT_INCONCLUSIVE_EVIDENCE semantics.
+- Negative-result integrity.
+- Condition-dependent heterogeneity safeguards.
+- No vote counting, quality scoring, numerical weighting, or pooling.
+- Stable scholarly identifier fallback.
+- Mandatory six-section output contract.
+
+
 ## v0.8.9
 
 ### Fixed

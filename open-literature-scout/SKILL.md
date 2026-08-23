@@ -8,7 +8,7 @@ description: >
 ---
 
 # Open Literature Scout
-Version: 0.8.9
+Version: 0.8.10
 
 ## Purpose
 
@@ -815,6 +815,77 @@ Final `ADEQUATE` diagnosis and stopping decisions require completion of
 both the target-preserving and target-relaxed counter-evidence discovery
 strategies, unless a documented source limitation prevents one of them.
 
+#### Citation-neighborhood counter-evidence expansion
+
+For claim-focused searches, complementary keyword retrieval may still
+miss relevant counter-evidence when the target organism, population,
+outcome, or finding is not foregrounded in the article title or indexed
+terms.
+
+When both Strategy A and Strategy B have been completed but the retained
+evidence set remains uniformly supportive or no direct contrary evidence
+has been identified, perform an additional discovery step before final
+search adequacy:
+
+**Strategy C — citation-neighborhood expansion**
+
+Strategy C must generate candidates through a discovery relationship
+that is materially different from another keyword-query variation.
+
+Acceptable Strategy C pathways include:
+
+- backward reference screening from directly relevant primary studies;
+- backward reference screening from relevant reviews used only as
+  discovery sources;
+- forward citation screening of important primary studies;
+- related-article or similar-article discovery from a scholarly index;
+- citation-network or reference-neighborhood discovery available through
+  a publisher, bibliographic database, or scholarly search system.
+
+A review identified during this process may be used to discover primary
+studies but must not replace primary evidence when primary evidence is
+required.
+
+Strategy C is not completed by:
+
+- adding another synonym to Strategy A or Strategy B;
+- removing another keyword while using the same ranked keyword-search
+  pathway;
+- repeating the same broad query through another interface;
+- merely searching explicit negative terminology.
+
+When screening citation-neighborhood candidates, do not require the
+article title to foreground the target organism, population, or outcome.
+
+Inspect the abstract, keywords, methods, results, tables, figures, or
+full text when available to determine whether the target is actually
+tested.
+
+Every plausible contrary, null, inconclusive, claim-limiting, or
+title-mismatch record discovered through Strategy C must enter the
+candidate ledger and remain there until explicit resolution.
+
+If Strategy C cannot be performed because the available source or tool
+does not expose citation, related-record, reference-list, or comparable
+discovery functionality, document that limitation explicitly.
+
+Do not silently treat another keyword query as a substitute for
+citation-neighborhood discovery.
+
+For claim-focused searches with a uniformly supportive retrieved set,
+do not finalize `ADEQUATE` merely because Strategy A and Strategy B were
+technically completed.
+
+Final adequacy should follow Strategy C when citation-neighborhood
+discovery is feasible.
+
+If no directly relevant contrary evidence is identified after the
+completed discovery strategies, report only that none was identified in
+the performed retrieval.
+
+Do not interpret failure to retrieve contrary evidence as evidence that
+contrary evidence does not exist.
+
 #### Candidate-ledger handoff integrity
 
 A counter-evidence candidate ledger must remain consistent with the
@@ -1046,21 +1117,86 @@ and place the explanation in a separate reason field.
 #### Appraisal-completeness integrity
 
 When STRUCTURED_SCOUT_APPRAISAL is active, appraisal must be performed
-and rendered per evidence unit.
+and rendered separately for every unique selected evidence unit that is
+eligible for appraisal.
 
-For every appraised study:
+Do not replace missing per-study appraisals with a collective statement
+such as:
 
-- report the appraisal basis;
-- assess all nine Scout domains individually;
-- use exactly one permitted domain label for each domain;
-- use NOT_VERIFIED when available information does not support a domain
-  judgment.
+"the remaining abstract-only studies were treated as NOT_VERIFIED"
 
-A cross-study appraisal summary may be added only after the per-study
-appraisals.
+or equivalent summary language.
+
+For every selected evidence unit, report:
+
+- study identity;
+- appraisal mode;
+- appraisal basis;
+- all nine Scout appraisal domains;
+- exactly one permitted judgment for each domain.
+
+The nine Scout appraisal domains are:
+
+1. Experimental object / material characterization
+2. Comparator / control adequacy
+3. Experimental-condition transparency
+4. Replication / repeatability reporting
+5. Outcome-measurement appropriateness
+6. Attribution of observed effect
+7. Statistical-analysis reporting
+8. Completeness / consistency of reported outcomes
+9. Reproducibility-relevant methodological detail
+
+Use only these domain judgments:
+
+- `ADEQUATELY_ADDRESSED`
+- `PARTIALLY_ADDRESSED`
+- `NOT_ADDRESSED`
+- `NOT_VERIFIED`
+- `NOT_APPLICABLE`
+
+A limited appraisal basis does not remove the requirement for a
+per-study appraisal record.
+
+For example, an `ABSTRACT_ONLY` study may legitimately have several
+domains judged `NOT_VERIFIED`, but the study must still have its own
+nine-domain appraisal record when STRUCTURED_SCOUT_APPRAISAL is active.
+
+Likewise, a `METADATA_ONLY` study must not be silently omitted from
+appraisal merely because methodological detail is limited.
+
+Use `NOT_VERIFIED` whenever the available appraisal basis does not
+support a stronger judgment.
+
+A cross-study appraisal summary may be added only after all required
+per-study appraisal records have been completed.
 
 A cross-study summary must never replace the required per-study
 appraisals.
+
+Before synthesis, reconcile:
+
+unique selected evidence units
+→ required per-study appraisal records.
+
+The completion condition is:
+
+`selected evidence units requiring appraisal`
+=
+`completed per-study appraisal records`
+
+Each unique selected evidence unit must map to exactly one appraisal
+record.
+
+Multiple discovery, verification, access, or duplicate records for the
+same scholarly study do not require multiple appraisals.
+
+Before finalizing synthesis, report appraisal as complete only when
+every selected study requiring appraisal has exactly one explicit
+per-study appraisal record.
+
+If the counts differ, appraisal is incomplete and the report must not
+proceed as though appraisal completion has been satisfied.
 
 Do not create combined domain labels such as:
 
@@ -1277,3 +1413,195 @@ conclusion sections if it has not appeared earlier with a clear status.
 Before finalizing the response, cross-check article names, counts,
 evidence states, DOI counts, and domain-specific classification counts
 against the Selected literature and Screening notes.
+
+### Aggregate report reconciliation
+
+Before finalizing Search quality, reconcile every reported aggregate
+count against the final deduplicated study-level records in:
+
+- Selected literature;
+- Screening notes;
+- candidate-ledger final resolutions;
+- DOI-verification fields;
+- full-text-access fields;
+- domain-specific classifications when used.
+
+Do not calculate Search-quality counts from memory, search-result
+totals, discovery records, or intermediate candidate lists.
+
+Calculate aggregate counts only after:
+
+1. candidate resolutions are final;
+2. retained-set reconciliation is complete;
+3. duplicate scholarly records have been merged;
+4. study-level and arm-level resolutions have been separated;
+5. Selected literature is final.
+
+Use the following counting rules.
+
+#### Unique selected evidence units
+
+`Unique selected evidence units`
+
+equals the number of deduplicated scholarly studies represented in the
+final Selected literature table.
+
+Multiple publisher, PubMed, PMC, repository, Crossref, or rediscovery
+records for the same study count once.
+
+#### Confirmed studies
+
+`Confirmed studies`
+
+equals the number of unique selected evidence units whose final
+Evidence status is exactly:
+
+`CONFIRMED`
+
+Do not include PROBABLE, UNVERIFIED, or EXCLUDED records.
+
+#### Probable studies
+
+`Probable studies`
+
+equals the number of unique study-level records whose final evidence
+state is exactly:
+
+`PROBABLE`
+
+Do not count the same scholarly study twice if it appears in more than
+one report location.
+
+#### Unverified records
+
+`Unverified records`
+
+equals the number of unique study-level records whose final evidence
+state is exactly:
+
+`UNVERIFIED`
+
+A NOT_VERIFIED extraction or appraisal field does not make the whole
+study UNVERIFIED.
+
+#### Excluded records
+
+`Excluded records`
+
+equals the number of unique scholarly study-level records whose final
+evidence state is:
+
+`EXCLUDED`
+
+Do not count an excluded experimental arm as an excluded scholarly study
+when the study-level resolution remains:
+
+`retained as evidence`
+
+For mixed-comparison studies, arm-level exclusions remain arm-level
+records and must not inflate the study-level EXCLUDED count.
+
+#### Verified DOI
+
+`Verified DOI`
+
+equals the number of unique scholarly records whose DOI-verification
+field uses one of:
+
+- `Verified — Publisher`
+- `Verified — Crossref`
+- `Verified — PubMed`
+- `Verified — Multiple authoritative sources`
+
+A study with:
+
+`Not verified`
+
+does not contribute to the Verified DOI count.
+
+Multiple authoritative verification sources for one DOI still count as
+one verified DOI record.
+
+#### Confirmed open/full-text articles
+
+`Confirmed open/full-text articles`
+
+equals the number of unique selected scholarly studies whose Full-text
+access field is exactly:
+
+- `Open access`; or
+- `Free full text`
+
+Do not count:
+
+- `Subscription/paywalled`;
+- `Status not verified`.
+
+Do not infer open/full-text availability from extraction basis.
+
+For example:
+
+`FULL_TEXT`
+
+does not automatically mean:
+
+`Open access`
+
+or:
+
+`Free full text`.
+
+The count must be derived from the controlled Full-text access field in
+the final Selected literature record.
+
+#### Domain-specific classification counts
+
+When a domain-specific summary is reported, reconcile each category
+against the final study-level classification.
+
+For mixed-comparison studies, distinguish:
+
+- study-level classification; and
+- arm-level classification.
+
+A study containing both an eligible native arm and an ineligible
+derivative, formulation, nanoparticle, chitooligosaccharide, or other arm
+must not be silently counted as purely native if the reporting taxonomy
+defines it as a mixed-comparison study.
+
+Likewise, the ineligible arm must not create an additional scholarly
+study count.
+
+#### Aggregate reconciliation gate
+
+Before final output, compare the calculated aggregate counts with the
+numbers rendered in Search quality.
+
+Report:
+
+`Aggregate report reconciliation: PASS`
+
+only when all reported aggregate counts match the final reconciled
+study-level records.
+
+At minimum reconcile:
+
+- Unique selected evidence units;
+- Confirmed studies;
+- Probable studies;
+- Unverified records;
+- Excluded records;
+- Verified DOI;
+- Confirmed open/full-text articles;
+- retained-candidate counts;
+- domain-specific classification counts when reported.
+
+If any reported count differs from the underlying final records, do not
+report:
+
+`Aggregate report reconciliation: PASS`
+
+Correct the underlying report or the aggregate count before finalizing.
+
+A discrepancy must not be explained away while leaving contradictory
+numbers in the final report.

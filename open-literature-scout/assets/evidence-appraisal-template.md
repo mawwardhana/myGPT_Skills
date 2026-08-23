@@ -214,3 +214,81 @@ Clearly separate:
 - study-reported facts;
 - formal-tool judgments;
 - scout interpretation.
+
+## Appraisal completion reconciliation
+
+Use this reconciliation when:
+
+**Appraisal mode: STRUCTURED_SCOUT_APPRAISAL**
+
+and more than one unique selected evidence unit requires appraisal.
+
+Every unique selected evidence unit requiring appraisal must have one
+explicit per-study appraisal record.
+
+Each per-study appraisal record must include:
+
+- study identity;
+- appraisal mode;
+- appraisal basis;
+- all nine Scout appraisal domains;
+- exactly one permitted judgment for each domain.
+
+Do not omit an appraisal record merely because the study is:
+
+- `ABSTRACT_ONLY`;
+- `METADATA_ONLY`; or
+- otherwise limited in methodological detail.
+
+Use `NOT_VERIFIED` for domains that cannot be defensibly assessed from
+the available appraisal basis.
+
+Do not replace missing study-level appraisal records with a collective
+statement about several studies.
+
+Before synthesis, report:
+
+**Selected evidence units requiring appraisal:**  
+**Completed per-study appraisal records:**  
+**Missing per-study appraisal records:**  
+
+The required relationship is:
+
+`Selected evidence units requiring appraisal`
+=
+`Completed per-study appraisal records`
+
+and:
+
+`Missing per-study appraisal records`
+=
+`0`
+
+Multiple discovery, verification, publisher, PubMed, PMC, repository,
+or other access records for the same scholarly study count as one
+evidence unit and therefore require only one appraisal record.
+
+Report:
+
+`Per-study appraisal completion: PASS`
+
+only when every unique selected evidence unit requiring appraisal has
+exactly one explicit per-study appraisal record.
+
+Otherwise report:
+
+`Per-study appraisal completion: FAIL`
+
+Do not proceed to evidence synthesis as though appraisal were complete
+when this reconciliation fails.
+
+When this template is rendered inside the mandatory literature report,
+keep the reconciliation inside:
+
+`## 4. Selected literature`
+
+and render it as a subsection such as:
+
+`### Appraisal completion reconciliation`
+
+Do not create an additional mandatory top-level report section.

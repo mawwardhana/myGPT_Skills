@@ -136,9 +136,18 @@ retrieval check before the final search diagnosis and stopping decision.
 | Target organism / population term relaxed | |
 | Title-mismatch candidates screened | |
 | Retrieval-channel diversity used | |
+| Strategy C triggered | |
+| Strategy C — citation-neighborhood expansion | |
+| Strategy C pathway used | |
+| Strategy C seed study / review / scholarly record | |
+| Strategy C source actually searched | |
+| Strategy C new plausible candidates discovered | |
+| Strategy C candidates entered candidate ledger | |
+| Strategy C candidate-ledger resolution status | |
+| Strategy C source limitation | |
 | Candidate ledger maintained | |
 | Candidate ledger resolution status | |
-| Material change from the passes | |
+| Material change from the counter-evidence passes | |
 
 For claim-focused searches with plausible title-mismatch risk, both
 counter-evidence discovery strategies must be auditable:
@@ -159,6 +168,63 @@ for the target was used.
 
 The target itself must be relaxed from at least one meaningful discovery
 query when title-mismatch risk is relevant.
+
+### Strategy C — citation-neighborhood expansion
+
+When Strategy A and Strategy B have been completed but the retrieved
+claim-relevant evidence remains uniformly supportive or no directly
+relevant contrary evidence has been identified, report whether Strategy C
+was triggered.
+
+Strategy C must use a discovery relationship that is materially
+different from another keyword-query variation.
+
+Acceptable pathways include:
+
+- backward reference screening from a directly relevant primary study;
+- backward reference screening from a relevant review used only as a
+  discovery source;
+- forward citation screening;
+- related-article or similar-article discovery;
+- citation-network or reference-neighborhood discovery.
+
+Report:
+
+**Strategy C triggered:**  
+**Strategy C pathway used:**  
+**Seed study / review / scholarly record:**  
+**Source actually exposing the citation relationship:**  
+**New plausible candidates discovered:**  
+**Candidates entered candidate ledger:**  
+**Material effect on the evidence set:**  
+
+Do not report Strategy C as completed when only another keyword-query
+variation was performed.
+
+The following do not independently satisfy Strategy C:
+
+- another synonym variation;
+- another broader keyword query;
+- removing an additional search term;
+- repeating the same keyword search through another interface;
+- testing negative/null terminology alone.
+
+When Strategy C is feasible, screen citation-neighborhood candidates
+beyond the title when necessary.
+
+A title that does not foreground the target organism, population,
+outcome, or finding is not a reason to discard the candidate before
+screening its accessible abstract, methods, results, tables, figures, or
+full text.
+
+Every plausible contrary, null, inconclusive, claim-limiting, or
+title-mismatch candidate discovered through Strategy C must enter the
+candidate ledger and remain there until explicit resolution.
+
+If Strategy C cannot be performed because citation, related-record,
+reference-list, forward-citation, or comparable discovery functionality
+is unavailable, report the specific limitation rather than substituting
+another keyword query.
 
 ### Counter-evidence candidate ledger
 
@@ -219,9 +285,15 @@ decisions should only appear after:
 
 1. Strategy A has been completed;
 2. Strategy B has been completed when applicable;
-3. candidate-ledger records have been resolved or explicitly retained as
-   unresolved;
-4. the material effect of the counter-evidence passes has been reported.
+3. Strategy C has been completed when triggered and feasible, or its
+   specific source/tool limitation has been explicitly documented;
+4. candidate-ledger records from all performed strategies have been
+   resolved or explicitly retained as unresolved;
+5. the material effect of the counter-evidence passes has been reported.
+
+When Strategy A and Strategy B leave a uniformly supportive evidence set
+or identify no directly relevant contrary evidence, Strategy C must be
+addressed before final claim-focused search adequacy.
 
 When `Synthesis mode` is `CLAIM_SUPPORT`, at least one search iteration
 must be identifiable as the counter-evidence retrieval pass.
@@ -473,6 +545,60 @@ Do not create a new mandatory top-level section for appraisal.
 A CONFIRMED article must not be described as high quality merely because
 its evidence status is confirmed.
 
+### Appraisal completion reconciliation
+
+When:
+
+`Appraisal mode: STRUCTURED_SCOUT_APPRAISAL`
+
+every unique selected evidence unit requiring appraisal must have one
+explicit per-study appraisal record.
+
+Report:
+
+**Selected evidence units requiring appraisal:**  
+**Completed per-study appraisal records:**  
+**Missing per-study appraisal records:**  
+
+The completion condition is:
+
+`Selected evidence units requiring appraisal`
+=
+`Completed per-study appraisal records`
+
+and:
+
+`Missing per-study appraisal records`
+=
+`0`
+
+Do not omit a selected study from appraisal merely because its appraisal
+basis is:
+
+- `ABSTRACT_ONLY`;
+- `METADATA_ONLY`; or
+- otherwise methodologically limited.
+
+Instead, retain the per-study appraisal record and use `NOT_VERIFIED`
+for domains that cannot be defensibly assessed.
+
+Do not replace missing per-study appraisal tables with a collective
+statement about the remaining studies.
+
+Report:
+
+`Per-study appraisal completion: PASS`
+
+only when every unique selected evidence unit requiring appraisal has
+exactly one explicit per-study appraisal record.
+
+Otherwise report:
+
+`Per-study appraisal completion: FAIL`
+
+Do not proceed as though appraisal were complete when this reconciliation
+fails.
+
 
 ### Evidence synthesis
 
@@ -548,6 +674,121 @@ Verified DOI:
 Confirmed open/full-text articles:  
 Unresolved verification issues:
 
+### Aggregate report reconciliation
+
+Calculate Search-quality aggregates only from the final reconciled
+study-level records.
+
+Do not calculate these counts from:
+
+- search-result totals;
+- discovery records;
+- duplicate publisher/PubMed/PMC records;
+- intermediate candidate lists;
+- memory of earlier search iterations.
+
+Reconcile the following fields against the final Selected literature and
+Screening notes:
+
+| Aggregate field | Reconciled count | Basis checked |
+|---|---:|---|
+| Unique selected evidence units | | Deduplicated Selected literature |
+| Confirmed studies | | Final `CONFIRMED` study-level records |
+| Probable studies | | Final `PROBABLE` study-level records |
+| Unverified records | | Final `UNVERIFIED` study-level records |
+| Excluded records | | Final study-level `EXCLUDED` records |
+| Verified DOI | | Allowed verified DOI labels |
+| Confirmed open/full-text articles | | `Open access` + `Free full text` only |
+| Retained candidates from ledger | | Final study-level retained candidates |
+| Retained candidates represented downstream | | Reconciled selected evidence set |
+| Unexplained retained-candidate omissions | | Retained-set reconciliation |
+
+Counting rules:
+
+**Confirmed studies**
+
+Count only unique selected evidence units whose Evidence status is
+exactly:
+
+`CONFIRMED`
+
+**Probable studies**
+
+Count unique study-level records whose final Evidence status is exactly:
+
+`PROBABLE`
+
+**Unverified records**
+
+Count unique study-level records whose final Evidence status is exactly:
+
+`UNVERIFIED`
+
+Do not count a study as UNVERIFIED merely because an extraction,
+appraisal, or quantitative field contains `NOT_VERIFIED`.
+
+**Excluded records**
+
+Count unique scholarly studies whose final study-level evidence state is:
+
+`EXCLUDED`
+
+Do not count excluded experimental arms as separate excluded studies when
+the scholarly study remains retained because an eligible arm exists.
+
+**Verified DOI**
+
+Count a unique scholarly record when its DOI-verification field is one
+of:
+
+- `Verified — Publisher`
+- `Verified — Crossref`
+- `Verified — PubMed`
+- `Verified — Multiple authoritative sources`
+
+Do not count:
+
+`Not verified`
+
+Multiple verification sources for the same study still count once.
+
+**Confirmed open/full-text articles**
+
+Count only unique selected studies whose Full-text access field is
+exactly:
+
+- `Open access`; or
+- `Free full text`
+
+Do not count:
+
+- `Subscription/paywalled`;
+- `Status not verified`.
+
+Do not infer Full-text access from Extraction basis.
+
+`FULL_TEXT` does not automatically mean `Open access` or
+`Free full text`.
+
+### Domain-classification reconciliation
+
+When a domain-specific summary is reported, reconcile its counts against
+the same final study-level evidence records.
+
+For mixed-comparison studies, distinguish:
+
+- study-level classification;
+- arm-level classification.
+
+A mixed-comparison study with an eligible native arm and an ineligible
+derivative, formulation, nanoparticle, chitooligosaccharide, or other arm
+must not be silently counted as a purely native-only study when the
+domain taxonomy classifies the scholarly study as mixed comparison.
+
+Arm-level exclusions must not create additional scholarly-study counts.
+
+If no domain-specific classification is used, omit this subsection.
+
 Search iterations performed:  
 Final search diagnosis:  
 Search stopping reason:
@@ -562,6 +803,37 @@ Use only the search stopping reason labels defined in
 
 If explanation is needed, provide it separately after the controlled
 label.
+
+### Aggregate reconciliation gate
+
+Report:
+
+`Aggregate report reconciliation: PASS`
+
+only when all reported aggregate counts match the final reconciled
+study-level records.
+
+At minimum verify consistency for:
+
+- Unique selected evidence units;
+- Confirmed studies;
+- Probable studies;
+- Unverified records;
+- Excluded records;
+- Verified DOI;
+- Confirmed open/full-text articles;
+- retained-candidate counts;
+- domain-specific classification counts when reported.
+
+If any count differs from the underlying final records, do not report:
+
+`Aggregate report reconciliation: PASS`
+
+Correct the underlying table, classification, or aggregate count before
+finalizing the report.
+
+Do not leave contradictory counts in the final report and explain the
+difference only in prose.
 
 ### Domain-specific summary
 

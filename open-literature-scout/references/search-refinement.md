@@ -471,6 +471,63 @@ independent discovery merely because query terms changed.
 If only one meaningful retrieval channel is available, state the source
 limitation explicitly.
 
+### Strategy C — citation-neighborhood expansion
+
+When Strategy A and Strategy B have been completed but the retrieved
+claim-relevant evidence remains uniformly supportive or no direct
+contrary evidence has been identified, perform citation-neighborhood
+discovery before final search adequacy when feasible.
+
+Strategy C must use a discovery relationship that is materially
+different from another keyword-query variation.
+
+Acceptable pathways include:
+
+- backward reference screening from directly relevant primary studies;
+- backward reference screening from relevant reviews used only as
+  discovery sources;
+- forward citation screening of directly relevant primary studies;
+- related-article or similar-article discovery from a scholarly index;
+- citation-network or reference-neighborhood discovery through a
+  publisher, bibliographic database, or scholarly search system.
+
+A review may be used as a discovery source for primary studies but must
+not replace primary evidence when the research question requires primary
+evidence.
+
+Strategy C is not satisfied by:
+
+- another Strategy A or Strategy B synonym variation;
+- removing one more keyword while remaining in the same ranked
+  keyword-search pathway;
+- repeating the same broad keyword query through another interface;
+- explicit negative/null terminology alone.
+
+For Strategy C candidates, do not require the title to foreground the
+target organism, population, outcome, or finding.
+
+Screen accessible evidence beyond the title when necessary, including:
+
+- abstract;
+- keywords;
+- methods;
+- results;
+- tables;
+- figures;
+- full text.
+
+Any plausible contrary, null, inconclusive, claim-limiting, or
+title-mismatch candidate discovered through Strategy C must enter the
+counter-evidence candidate ledger and remain there until explicit
+resolution.
+
+When Strategy C is not feasible because the available source or tool
+does not expose citation, related-record, reference-list, or comparable
+discovery functionality, report that source limitation explicitly.
+
+Do not substitute another keyword query and describe it as
+citation-neighborhood discovery.
+
 ### Counter-evidence candidate ledger
 
 Maintain a temporary candidate ledger across search iterations for any
@@ -742,6 +799,44 @@ Completion requires that:
   resolution;
 - retained-set and selected-literature-set reconciliation has no
   unexplained mismatch.
+
+  For claim-focused searches whose retrieved evidence remains uniformly
+supportive or contains no directly relevant contrary evidence after
+Strategy A and Strategy B, counter-evidence discovery is not complete
+until Strategy C has also been addressed.
+
+Completion requires one of the following:
+
+1. Strategy C was performed using a genuine citation-neighborhood,
+   related-record, reference-list, forward-citation, or comparable
+   non-keyword discovery pathway; or
+
+2. Strategy C could not be performed and the specific source/tool
+   limitation was explicitly documented.
+
+Do not treat another keyword-query variation as fulfillment of
+Strategy C.
+
+Before final `ADEQUATE` diagnosis or a controlled stopping reason, report:
+
+- whether Strategy C was triggered;
+- which citation-neighborhood pathway was used;
+- which seed study, review, or scholarly record initiated the pathway;
+- which source actually exposed the citation/related-record
+  relationship;
+- whether new plausible candidates were discovered;
+- whether those candidates entered and were resolved in the candidate
+  ledger;
+- the material effect of Strategy C on the final evidence set.
+
+A uniformly supportive retained set after Strategy A and Strategy B is
+a trigger for additional discovery effort, not evidence that
+counter-evidence is absent.
+
+If Strategy C also identifies no directly relevant contrary evidence,
+report only that none was identified in the performed retrieval.
+
+Do not infer that contrary evidence does not exist.
 
 ### Interpretation of the check
 

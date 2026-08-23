@@ -507,6 +507,103 @@ are not interchangeable categories.
 When comparing studies with different designs, describe methodological
 strengths and concerns within the appropriate appraisal framework.
 
+## Per-study appraisal completion rule
+
+When appraisal mode is:
+
+`STRUCTURED_SCOUT_APPRAISAL`
+
+every unique selected evidence unit that remains eligible for appraisal
+must have one explicit per-study appraisal record.
+
+A selected study must not be omitted from appraisal merely because its
+appraisal basis is limited to:
+
+- `ABSTRACT_ONLY`; or
+- `METADATA_ONLY`.
+
+Limited source detail affects the strength of domain judgments, not the
+requirement to create the appraisal record.
+
+For each unique selected study, report:
+
+- study identity;
+- appraisal mode;
+- appraisal basis;
+- all nine Scout appraisal domains;
+- exactly one permitted judgment for each domain.
+
+Use `NOT_VERIFIED` for any domain that cannot be defensibly assessed from
+the available appraisal basis.
+
+Do not replace missing per-study appraisals with a collective statement
+such as:
+
+"the remaining abstract-only studies have domains treated as
+NOT_VERIFIED"
+
+or equivalent wording.
+
+A cross-study appraisal summary may be provided only after the required
+per-study appraisal records have been rendered.
+
+### Appraisal-completion reconciliation
+
+Before appraisal is considered complete, reconcile the deduplicated
+selected evidence set against the per-study appraisal set.
+
+Report:
+
+`Selected evidence units requiring appraisal: [n]`
+
+`Completed per-study appraisal records: [n]`
+
+`Missing per-study appraisal records: [n]`
+
+The required completion condition is:
+
+`selected evidence units requiring appraisal`
+=
+`completed per-study appraisal records`
+
+and:
+
+`missing per-study appraisal records`
+=
+`0`
+
+Each unique selected evidence unit must map to exactly one per-study
+appraisal record.
+
+Multiple:
+
+- discovery records;
+- publisher records;
+- PubMed records;
+- repository records;
+- full-text access routes;
+- duplicate search hits
+
+for the same scholarly study must not create additional appraisal
+records.
+
+If one or more selected evidence units lack an explicit appraisal
+record, appraisal is incomplete.
+
+Do not proceed as though appraisal completion has been satisfied merely
+because the available studies have been summarized collectively.
+
+When STRUCTURED_SCOUT_APPRAISAL is active, report:
+
+`Per-study appraisal completion: PASS`
+
+only when every selected evidence unit requiring appraisal has exactly
+one explicit per-study appraisal record.
+
+Otherwise report:
+
+`Per-study appraisal completion: FAIL`
+
 ## Appraisal consistency rule
 
 Before finalizing appraisal, cross-check:
