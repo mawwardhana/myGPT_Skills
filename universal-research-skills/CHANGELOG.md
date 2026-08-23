@@ -2,6 +2,103 @@
 
 All notable changes to Universal Research Skills will be documented in this file.
 
+## [0.4.0] - Evidence & Reference Integrity Layer
+
+### Added
+
+- `citation-chaining` skill for expanding verified scholarly corpora through backward citations, forward citations, related-paper discovery, author lineage, theory lineage, method lineage, replication tracking, contradiction tracking, and closest-competitor discovery.
+- `literature-screening` skill for creating transparent and purpose-specific eligible literature corpora using explicit inclusion and exclusion criteria.
+- `evidence-synthesis` skill for integrating findings across verified and screened studies into defensible scientific conclusions.
+- Backward and forward citation chaining for identifying foundational literature, replications, validations, extensions, critiques, contradictions, and subsequent scientific development.
+- Citation genealogy and scientific-lineage mapping.
+- False-gap protection through citation-network expansion and terminology-aware literature recovery.
+- Screening modes for exploratory research, research landscapes, trends, emerging topics, State of the Art, gap validation, novelty validation, continuation research, systematic review, meta-analysis, methodology, and manuscript support.
+- Transparent title, abstract, and full-text screening logic.
+- Explicit screening exclusion reasons and duplicate-study controls.
+- Shared-dataset awareness to prevent false independent replication.
+- Contradictory and negative-result protection during literature screening.
+- Evidence synthesis across convergent, contradictory, heterogeneous, mechanistic, contextual, methodological, and temporal patterns.
+- Evidence-maturity assessment.
+- Evidence-strength assessment.
+- Consensus classification.
+- Explicit distinction between evidence absence and evidence of no effect.
+- Evidence maps linking synthesis claims to supporting and contradictory studies.
+- Handoff from narrative synthesis to meta-analysis when quantitative pooling is scientifically appropriate.
+
+### Completed Architecture
+
+The Evidence & Reference Integrity Layer now follows:
+
+`scopus-literature-search`
+→ `source-verification`
+→ `reference-integrity-guard`
+→ `citation-chaining`
+→ `literature-screening`
+→ `evidence-synthesis`
+
+### Functional Responsibilities
+
+`scopus-literature-search`
+- DISCOVER relevant scholarly literature.
+
+`source-verification`
+- VERIFY publication identity, metadata, DOI, scholarly status, Scopus status, correction, and retraction information.
+
+`reference-integrity-guard`
+- GUARD the relationship between scientific claims, citations, verified sources, and reference-list entries.
+
+`citation-chaining`
+- EXPAND the corpus through scientific relationships around verified anchor papers.
+
+`literature-screening`
+- SELECT scientifically relevant and eligible evidence.
+
+`evidence-synthesis`
+- SYNTHESIZE the included evidence into defensible cross-study scientific conclusions.
+
+### Scientific Integrity
+
+The completed Evidence & Reference Integrity Layer enforces:
+
+- no fabricated references;
+- no guessed DOI values;
+- no metadata mashups;
+- no unsupported Scopus claims;
+- no citation padding;
+- no target-journal citation manipulation;
+- no exclusion of contradictory evidence merely because it conflicts with a preferred interpretation;
+- no treatment of publication counts as evidence quality;
+- no treatment of journal quartile as study quality;
+- no APC-based evidence filtering;
+- no confusion between discovered and verified literature;
+- no confusion between eligible literature and strong evidence;
+- no confusion between evidence absence and evidence of no effect;
+- no synthesis from unverified or inadequately screened evidence.
+
+### Evidence Pipeline
+
+The framework now supports the complete evidence flow:
+
+Research Question / Research Direction
+→ Scholarly Discovery
+→ Source Verification
+→ Reference Integrity
+→ Citation Expansion
+→ Literature Screening
+→ Evidence Synthesis
+
+The resulting evidence architecture is ready to support:
+
+- State-of-the-Art development;
+- research-gap discovery;
+- research-gap validation;
+- novelty construction;
+- novelty auditing;
+- theoretical positioning;
+- methodological design;
+- scientific discussion;
+- manuscript preparation.
+
 ## [0.4.0-alpha.1] - Evidence & Reference Integrity Foundation
 
 ### Added
