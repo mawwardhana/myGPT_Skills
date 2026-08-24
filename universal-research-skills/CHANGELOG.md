@@ -2,6 +2,116 @@
 
 All notable changes to Universal Research Skills will be documented in this file.
 
+## [0.5.0] - Scientific Positioning Layer
+
+### Added
+
+- `sota-builder` skill for constructing a defensible current State of the Art from verified and synthesized scholarly evidence.
+- `gap-discovery` skill for transforming unresolved scientific conditions into explicit candidate research gaps.
+- `gap-validator` skill for adversarially stress-testing candidate gaps against current literature, alternative terminology, adjacent disciplines, citation networks, methodological equivalents, and closest competitor studies.
+- `novelty-builder` skill for constructing precise scientific contribution claims from validated gaps and closest existing research.
+- `novelty-auditor` skill for stress-testing proposed novelty claims against the strongest verified competitors and current evidence.
+- State-of-the-Art architecture distinguishing established knowledge, emerging evidence, contested knowledge, unresolved questions, and active scientific frontiers.
+- Explicit research-gap taxonomy covering theoretical, conceptual, empirical, contradiction, mechanistic, methodological, measurement, analytical, validation, population, contextual, temporal, predictive, intervention, implementation, translational, and integration gaps.
+- False-gap safeguards against geographic absence, arbitrary variable combinations, mediator/moderator shopping, method-as-gap reasoning, technology-as-gap reasoning, and trend-based gap claims.
+- Explicit falsification conditions for candidate research gaps.
+- Adversarial gap validation designed to search for evidence that could invalidate, weaken, resolve, or reframe a proposed gap.
+- Closest-competitor identification and competitor comparison matrices.
+- Gap outcomes including validated, partially validated, reframed, weak, substantially resolved, rejected, and inconclusive.
+- Scientific-consequence and researchability assessment for validated gaps.
+- Explicit novelty taxonomy covering theoretical, conceptual, mechanistic, empirical, methodological, measurement, analytical, validation, predictive, intervention, implementation, translational, contextual, integrative, and technological contributions.
+- Novelty construction based on meaningful scientific advancement relative to the closest existing evidence.
+- Mandatory distinction between `WHAT IS NOVEL` and `WHAT IS NOT NOVEL`.
+- Novelty-boundary statements to reduce overclaiming.
+- Novelty falsification and strongest-competitor stress testing.
+- First-study claim safeguards.
+- Terminology-reframing and adjacent-discipline novelty audits.
+- Duplication, replication, validation, and incremental-contribution classification.
+- Novelty threat analysis covering direct duplication, competitor overlap, geographic-only differences, method-only differences, variable-combination-only claims, technology hype, and rapid field change.
+- Pre-submission novelty-refresh logic for fast-moving research fields.
+- Reviewer-challenge simulation for novelty claims.
+
+### Architecture
+
+The Scientific Positioning Layer follows:
+
+`evidence-synthesis`
+→ `sota-builder`
+→ `gap-discovery`
+→ `gap-validator`
+→ `novelty-builder`
+→ `novelty-auditor`
+
+### Functional Responsibilities
+
+`evidence-synthesis`
+- Determines what the verified evidence collectively shows.
+
+`sota-builder`
+- Establishes what is currently known, emerging, contested, unresolved, and scientifically frontier-level.
+
+`gap-discovery`
+- Converts selected unresolved conditions into candidate research gaps.
+
+`gap-validator`
+- Attempts to disprove, close, weaken, or reframe those gaps before they are accepted.
+
+`novelty-builder`
+- Defines the proposed scientific advancement relative to the validated gap and closest competitors.
+
+`novelty-auditor`
+- Attempts to disprove or narrow that novelty claim before downstream study design or publication positioning.
+
+### Scientific Integrity
+
+The Scientific Positioning Layer establishes these principles:
+
+- unresolved does not automatically mean research gap;
+- absence of literature does not automatically prove a gap;
+- one failed search does not validate a gap;
+- an author's limitation section does not establish a current gap;
+- future-research recommendations must be revalidated against current literature;
+- geographic absence alone is weak gap evidence;
+- arbitrary variable combinations are not meaningful gaps;
+- a different software package is not methodological novelty;
+- a trendy technology does not automatically create a scientific gap;
+- research gaps must survive active falsification attempts;
+- close competitor studies must be disclosed rather than hidden;
+- novelty must be defined relative to the strongest existing competitors;
+- replication and validation should be described honestly rather than disguised as first discovery;
+- incremental novelty can be valuable when scientifically meaningful;
+- "first ever" claims require exceptionally strong evidence coverage;
+- novelty is not a marketing statement;
+- target-journal preferences must not distort gap or novelty claims;
+- APC status and journal quartile do not determine scientific novelty.
+
+### Scientific Positioning Pipeline
+
+The framework now supports:
+
+Verified Evidence
+→ Evidence Synthesis
+→ State of the Art
+→ Candidate Gap Discovery
+→ Adversarial Gap Validation
+→ Proposed Novelty
+→ Adversarial Novelty Audit
+→ Defensible Scientific Position
+
+### Downstream Readiness
+
+The resulting validated gap and audited novelty can now support:
+
+- research-question development;
+- hypothesis development;
+- theoretical-framework construction;
+- conceptual-framework construction;
+- continuation-study selection;
+- research-program development;
+- research-roadmap development;
+- methodology design;
+- manuscript positioning.
+
 ## [0.4.0] - Evidence & Reference Integrity Layer
 
 ### Added
